@@ -1,10 +1,31 @@
 {
   "id_map": {},
-  "mod_elements": [],
+  "mod_elements": [
+    {
+      "name": "AlchemicalInfusedArmorArmor",
+      "type": "armor",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "alchemical_infused_armor_armor",
+      "metadata": {
+        "eh": true,
+        "el": true,
+        "eb": true,
+        "ec": true
+      }
+    }
+  ],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
-    "en_us": {}
+    "en_us": {
+      "item.alchemical_excellence.alchemical_infused_armor_armorbody": "AlchemicalInfusedArmor Chestplate",
+      "item.alchemical_excellence.alchemical_infused_armor_armorlegs": "AlchemicalInfusedArmor Leggings",
+      "item.alchemical_excellence.alchemical_infused_armor_armorhelmet": "AlchemicalInfusedArmor Helmet",
+      "item.alchemical_excellence.alchemical_infused_armor_armorboots": "AlchemicalInfusedArmor Boots"
+    }
   },
   "workspaceSettings": {
     "modid": "alchemical_excellence",
