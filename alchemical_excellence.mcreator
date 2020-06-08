@@ -42,6 +42,15 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "ae_fragment"
+    },
+    {
+      "name": "AEOre",
+      "type": "block",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ae_ore"
     }
   ],
   "variable_elements": [],
@@ -50,6 +59,7 @@
     "en_us": {
       "item.alchemical_excellence.alchemical_infused_armor_armorbody": "AlchemicalInfusedArmor Chestplate",
       "item.alchemical_excellence.alchemical_infused_armor_armorlegs": "AlchemicalInfusedArmor Leggings",
+      "block.alchemical_excellence.ae_ore": "Alchemical Fragment Ore",
       "item.alchemical_excellence.alchemical_infused_armor_armorhelmet": "AlchemicalInfusedArmor Helmet",
       "item.alchemical_excellence.ae_shard": "Alchemical Shard",
       "itemGroup.tabae_creativetab": "Alchemical Excellence",
