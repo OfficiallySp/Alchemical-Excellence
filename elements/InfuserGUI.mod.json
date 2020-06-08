@@ -1,0 +1,195 @@
+{
+  "_fv": 8,
+  "_type": "gui",
+  "definition": {
+    "type": 1,
+    "width": 385,
+    "height": 455,
+    "renderBgLayer": true,
+    "components": [
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": "CUSTOM:AEFragment"
+          },
+          "id": 0,
+          "disableStackInteraction": false,
+          "name": "Slot #0",
+          "x": 408,
+          "y": 24
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": "CUSTOM:AEFragment"
+          },
+          "id": 1,
+          "disableStackInteraction": false,
+          "name": "Slot #1",
+          "x": 354,
+          "y": 42
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": "CUSTOM:AEFragment"
+          },
+          "id": 2,
+          "disableStackInteraction": false,
+          "name": "Slot #2",
+          "x": 300,
+          "y": 78
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": "CUSTOM:AEFragment"
+          },
+          "id": 3,
+          "disableStackInteraction": false,
+          "name": "Slot #3",
+          "x": 246,
+          "y": 114
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": "CUSTOM:AEFragment"
+          },
+          "id": 4,
+          "disableStackInteraction": false,
+          "name": "Slot #4",
+          "x": 300,
+          "y": 150
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": "CUSTOM:AEFragment"
+          },
+          "id": 5,
+          "disableStackInteraction": false,
+          "name": "Slot #5",
+          "x": 354,
+          "y": 186
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": "CUSTOM:AEFragment"
+          },
+          "id": 6,
+          "disableStackInteraction": false,
+          "name": "Slot #6",
+          "x": 408,
+          "y": 186
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": "CUSTOM:AEFragment"
+          },
+          "id": 7,
+          "disableStackInteraction": false,
+          "name": "Slot #7",
+          "x": 462,
+          "y": 186
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": "CUSTOM:AEFragment"
+          },
+          "id": 8,
+          "disableStackInteraction": false,
+          "name": "Slot #8",
+          "x": 516,
+          "y": 150
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": "CUSTOM:AEFragment"
+          },
+          "id": 9,
+          "disableStackInteraction": false,
+          "name": "Slot #9",
+          "x": 570,
+          "y": 114
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": "CUSTOM:AEFragment"
+          },
+          "id": 10,
+          "disableStackInteraction": false,
+          "name": "Slot #10",
+          "x": 516,
+          "y": 78
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": "CUSTOM:AEFragment"
+          },
+          "id": 11,
+          "disableStackInteraction": false,
+          "name": "Slot #11",
+          "x": 462,
+          "y": 42
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "color": {
+            "value": -65281,
+            "falpha": 0.0
+          },
+          "id": 12,
+          "disableStackInteraction": false,
+          "name": "Slot #12",
+          "x": 408,
+          "y": 114
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Infuser",
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "name": "Infuser",
+          "x": 246,
+          "y": 24
+        }
+      }
+    ]
+  }
+}
