@@ -37,6 +37,7 @@ import java.util.function.Supplier;
 import java.util.Map;
 import java.util.HashMap;
 
+import com.officiallysp.alchemicalexcellence.procedures.InfuserDataProcedure;
 import com.officiallysp.alchemicalexcellence.item.AEFragmentItem;
 import com.officiallysp.alchemicalexcellence.AlchemicalExcellenceModElements;
 import com.officiallysp.alchemicalexcellence.AlchemicalExcellenceMod;
@@ -113,11 +114,23 @@ public class InfuserGUIGui extends AlchemicalExcellenceModElements.ModElement {
 			}
 			this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 88, 7) {
 				@Override
+				public void onSlotChanged() {
+					super.onSlotChanged();
+					GuiContainerMod.this.slotChanged(0, 0, 0);
+				}
+
+				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return (new ItemStack(AEFragmentItem.block, (int) (1)).getItem() == stack.getItem());
 				}
 			}));
 			this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 61, 16) {
+				@Override
+				public void onSlotChanged() {
+					super.onSlotChanged();
+					GuiContainerMod.this.slotChanged(1, 0, 0);
+				}
+
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return (new ItemStack(AEFragmentItem.block, (int) (1)).getItem() == stack.getItem());
@@ -125,11 +138,23 @@ public class InfuserGUIGui extends AlchemicalExcellenceModElements.ModElement {
 			}));
 			this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 34, 34) {
 				@Override
+				public void onSlotChanged() {
+					super.onSlotChanged();
+					GuiContainerMod.this.slotChanged(2, 0, 0);
+				}
+
+				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return (new ItemStack(AEFragmentItem.block, (int) (1)).getItem() == stack.getItem());
 				}
 			}));
 			this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 7, 52) {
+				@Override
+				public void onSlotChanged() {
+					super.onSlotChanged();
+					GuiContainerMod.this.slotChanged(3, 0, 0);
+				}
+
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return (new ItemStack(AEFragmentItem.block, (int) (1)).getItem() == stack.getItem());
@@ -137,11 +162,23 @@ public class InfuserGUIGui extends AlchemicalExcellenceModElements.ModElement {
 			}));
 			this.customSlots.put(4, this.addSlot(new SlotItemHandler(internal, 4, 34, 70) {
 				@Override
+				public void onSlotChanged() {
+					super.onSlotChanged();
+					GuiContainerMod.this.slotChanged(4, 0, 0);
+				}
+
+				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return (new ItemStack(AEFragmentItem.block, (int) (1)).getItem() == stack.getItem());
 				}
 			}));
 			this.customSlots.put(5, this.addSlot(new SlotItemHandler(internal, 5, 61, 88) {
+				@Override
+				public void onSlotChanged() {
+					super.onSlotChanged();
+					GuiContainerMod.this.slotChanged(5, 0, 0);
+				}
+
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return (new ItemStack(AEFragmentItem.block, (int) (1)).getItem() == stack.getItem());
@@ -149,11 +186,23 @@ public class InfuserGUIGui extends AlchemicalExcellenceModElements.ModElement {
 			}));
 			this.customSlots.put(6, this.addSlot(new SlotItemHandler(internal, 6, 88, 88) {
 				@Override
+				public void onSlotChanged() {
+					super.onSlotChanged();
+					GuiContainerMod.this.slotChanged(6, 0, 0);
+				}
+
+				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return (new ItemStack(AEFragmentItem.block, (int) (1)).getItem() == stack.getItem());
 				}
 			}));
 			this.customSlots.put(7, this.addSlot(new SlotItemHandler(internal, 7, 115, 88) {
+				@Override
+				public void onSlotChanged() {
+					super.onSlotChanged();
+					GuiContainerMod.this.slotChanged(7, 0, 0);
+				}
+
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return (new ItemStack(AEFragmentItem.block, (int) (1)).getItem() == stack.getItem());
@@ -161,11 +210,23 @@ public class InfuserGUIGui extends AlchemicalExcellenceModElements.ModElement {
 			}));
 			this.customSlots.put(8, this.addSlot(new SlotItemHandler(internal, 8, 142, 70) {
 				@Override
+				public void onSlotChanged() {
+					super.onSlotChanged();
+					GuiContainerMod.this.slotChanged(8, 0, 0);
+				}
+
+				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return (new ItemStack(AEFragmentItem.block, (int) (1)).getItem() == stack.getItem());
 				}
 			}));
 			this.customSlots.put(9, this.addSlot(new SlotItemHandler(internal, 9, 169, 52) {
+				@Override
+				public void onSlotChanged() {
+					super.onSlotChanged();
+					GuiContainerMod.this.slotChanged(9, 0, 0);
+				}
+
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return (new ItemStack(AEFragmentItem.block, (int) (1)).getItem() == stack.getItem());
@@ -173,17 +234,35 @@ public class InfuserGUIGui extends AlchemicalExcellenceModElements.ModElement {
 			}));
 			this.customSlots.put(10, this.addSlot(new SlotItemHandler(internal, 10, 142, 34) {
 				@Override
+				public void onSlotChanged() {
+					super.onSlotChanged();
+					GuiContainerMod.this.slotChanged(10, 0, 0);
+				}
+
+				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return (new ItemStack(AEFragmentItem.block, (int) (1)).getItem() == stack.getItem());
 				}
 			}));
 			this.customSlots.put(11, this.addSlot(new SlotItemHandler(internal, 11, 115, 16) {
 				@Override
+				public void onSlotChanged() {
+					super.onSlotChanged();
+					GuiContainerMod.this.slotChanged(11, 0, 0);
+				}
+
+				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return (new ItemStack(AEFragmentItem.block, (int) (1)).getItem() == stack.getItem());
 				}
 			}));
 			this.customSlots.put(12, this.addSlot(new SlotItemHandler(internal, 12, 88, 52) {
+				@Override
+				public void onSlotChanged() {
+					super.onSlotChanged();
+					GuiContainerMod.this.slotChanged(12, 0, 0);
+				}
+
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return false;
@@ -498,5 +577,135 @@ public class InfuserGUIGui extends AlchemicalExcellenceModElements.ModElement {
 		// security measure to prevent arbitrary chunk generation
 		if (!world.isBlockLoaded(new BlockPos(x, y, z)))
 			return;
+		if (slotID == 0 && changeType == 0) {
+			{
+				java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				InfuserDataProcedure.executeProcedure($_dependencies);
+			}
+		}
+		if (slotID == 1 && changeType == 0) {
+			{
+				java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				InfuserDataProcedure.executeProcedure($_dependencies);
+			}
+		}
+		if (slotID == 2 && changeType == 0) {
+			{
+				java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				InfuserDataProcedure.executeProcedure($_dependencies);
+			}
+		}
+		if (slotID == 3 && changeType == 0) {
+			{
+				java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				InfuserDataProcedure.executeProcedure($_dependencies);
+			}
+		}
+		if (slotID == 4 && changeType == 0) {
+			{
+				java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				InfuserDataProcedure.executeProcedure($_dependencies);
+			}
+		}
+		if (slotID == 5 && changeType == 0) {
+			{
+				java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				InfuserDataProcedure.executeProcedure($_dependencies);
+			}
+		}
+		if (slotID == 6 && changeType == 0) {
+			{
+				java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				InfuserDataProcedure.executeProcedure($_dependencies);
+			}
+		}
+		if (slotID == 7 && changeType == 0) {
+			{
+				java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				InfuserDataProcedure.executeProcedure($_dependencies);
+			}
+		}
+		if (slotID == 8 && changeType == 0) {
+			{
+				java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				InfuserDataProcedure.executeProcedure($_dependencies);
+			}
+		}
+		if (slotID == 9 && changeType == 0) {
+			{
+				java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				InfuserDataProcedure.executeProcedure($_dependencies);
+			}
+		}
+		if (slotID == 10 && changeType == 0) {
+			{
+				java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				InfuserDataProcedure.executeProcedure($_dependencies);
+			}
+		}
+		if (slotID == 11 && changeType == 0) {
+			{
+				java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				InfuserDataProcedure.executeProcedure($_dependencies);
+			}
+		}
+		if (slotID == 12 && changeType == 0) {
+			{
+				java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				InfuserDataProcedure.executeProcedure($_dependencies);
+			}
+		}
 	}
 }

@@ -69,6 +69,35 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "infuser_gui"
+    },
+    {
+      "name": "InfuserData",
+      "type": "procedure",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "infuser_data",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "int"
+          },
+          {
+            "name": "y",
+            "type": "int"
+          },
+          {
+            "name": "z",
+            "type": "int"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -91,7 +120,7 @@
     "modName": "Alchemical Excellence",
     "version": "1.0.0",
     "author": "OfficiallySp777",
-    "websiteURL": "officiallysp.sytes.net",
+    "websiteURL": "https://mcreator.net",
     "disableForgeVersionCheck": true,
     "serverSideOnly": false,
     "requiredMods": [],
@@ -99,6 +128,7 @@
     "dependants": [],
     "mcreatorDependencies": [],
     "currentGenerator": "forge-1.15.2",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
     "modElementsPackage": "com.officiallysp.alchemicalexcellence",
     "lockBaseModFiles": false
   },

@@ -15,6 +15,9 @@
           },
           "id": 0,
           "disableStackInteraction": false,
+          "onSlotChanged": {
+            "name": "InfuserData"
+          },
           "name": "Slot #0",
           "x": 408,
           "y": 24
@@ -28,6 +31,9 @@
           },
           "id": 1,
           "disableStackInteraction": false,
+          "onSlotChanged": {
+            "name": "InfuserData"
+          },
           "name": "Slot #1",
           "x": 354,
           "y": 42
@@ -41,6 +47,9 @@
           },
           "id": 2,
           "disableStackInteraction": false,
+          "onSlotChanged": {
+            "name": "InfuserData"
+          },
           "name": "Slot #2",
           "x": 300,
           "y": 78
@@ -54,6 +63,9 @@
           },
           "id": 3,
           "disableStackInteraction": false,
+          "onSlotChanged": {
+            "name": "InfuserData"
+          },
           "name": "Slot #3",
           "x": 246,
           "y": 114
@@ -67,6 +79,9 @@
           },
           "id": 4,
           "disableStackInteraction": false,
+          "onSlotChanged": {
+            "name": "InfuserData"
+          },
           "name": "Slot #4",
           "x": 300,
           "y": 150
@@ -80,6 +95,9 @@
           },
           "id": 5,
           "disableStackInteraction": false,
+          "onSlotChanged": {
+            "name": "InfuserData"
+          },
           "name": "Slot #5",
           "x": 354,
           "y": 186
@@ -93,6 +111,9 @@
           },
           "id": 6,
           "disableStackInteraction": false,
+          "onSlotChanged": {
+            "name": "InfuserData"
+          },
           "name": "Slot #6",
           "x": 408,
           "y": 186
@@ -106,6 +127,9 @@
           },
           "id": 7,
           "disableStackInteraction": false,
+          "onSlotChanged": {
+            "name": "InfuserData"
+          },
           "name": "Slot #7",
           "x": 462,
           "y": 186
@@ -119,6 +143,9 @@
           },
           "id": 8,
           "disableStackInteraction": false,
+          "onSlotChanged": {
+            "name": "InfuserData"
+          },
           "name": "Slot #8",
           "x": 516,
           "y": 150
@@ -132,6 +159,9 @@
           },
           "id": 9,
           "disableStackInteraction": false,
+          "onSlotChanged": {
+            "name": "InfuserData"
+          },
           "name": "Slot #9",
           "x": 570,
           "y": 114
@@ -145,6 +175,9 @@
           },
           "id": 10,
           "disableStackInteraction": false,
+          "onSlotChanged": {
+            "name": "InfuserData"
+          },
           "name": "Slot #10",
           "x": 516,
           "y": 78
@@ -158,6 +191,9 @@
           },
           "id": 11,
           "disableStackInteraction": false,
+          "onSlotChanged": {
+            "name": "InfuserData"
+          },
           "name": "Slot #11",
           "x": 462,
           "y": 42
@@ -172,6 +208,9 @@
           },
           "id": 12,
           "disableStackInteraction": false,
+          "onSlotChanged": {
+            "name": "InfuserData"
+          },
           "name": "Slot #12",
           "x": 408,
           "y": 114
