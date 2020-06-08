@@ -15,6 +15,24 @@
         "eb": true,
         "ec": true
       }
+    },
+    {
+      "name": "AEShard",
+      "type": "item",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ae_shard"
+    },
+    {
+      "name": "AECreativetab",
+      "type": "tab",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ae_creativetab"
     }
   ],
   "variable_elements": [],
@@ -24,6 +42,8 @@
       "item.alchemical_excellence.alchemical_infused_armor_armorbody": "AlchemicalInfusedArmor Chestplate",
       "item.alchemical_excellence.alchemical_infused_armor_armorlegs": "AlchemicalInfusedArmor Leggings",
       "item.alchemical_excellence.alchemical_infused_armor_armorhelmet": "AlchemicalInfusedArmor Helmet",
+      "item.alchemical_excellence.ae_shard": "Alchemical Shard",
+      "itemGroup.tabae_creativetab": "Alchemical Excellence",
       "item.alchemical_excellence.alchemical_infused_armor_armorboots": "AlchemicalInfusedArmor Boots"
     }
   },

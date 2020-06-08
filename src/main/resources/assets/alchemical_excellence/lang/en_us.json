@@ -2,5 +2,7 @@
   "item.alchemical_excellence.alchemical_infused_armor_armorbody": "AlchemicalInfusedArmor Chestplate",
   "item.alchemical_excellence.alchemical_infused_armor_armorlegs": "AlchemicalInfusedArmor Leggings",
   "item.alchemical_excellence.alchemical_infused_armor_armorhelmet": "AlchemicalInfusedArmor Helmet",
+  "item.alchemical_excellence.ae_shard": "Alchemical Shard",
+  "itemGroup.tabae_creativetab": "Alchemical Excellence",
   "item.alchemical_excellence.alchemical_infused_armor_armorboots": "AlchemicalInfusedArmor Boots"
 }
