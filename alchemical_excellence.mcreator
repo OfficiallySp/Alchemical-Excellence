@@ -33,6 +33,15 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "ae_creativetab"
+    },
+    {
+      "name": "AEFragment",
+      "type": "item",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ae_fragment"
     }
   ],
   "variable_elements": [],
@@ -44,6 +53,7 @@
       "item.alchemical_excellence.alchemical_infused_armor_armorhelmet": "AlchemicalInfusedArmor Helmet",
       "item.alchemical_excellence.ae_shard": "Alchemical Shard",
       "itemGroup.tabae_creativetab": "Alchemical Excellence",
+      "item.alchemical_excellence.ae_fragment": "AE Fragment",
       "item.alchemical_excellence.alchemical_infused_armor_armorboots": "AlchemicalInfusedArmor Boots"
     }
   },
