@@ -82,7 +82,7 @@ public class AEOreBlock extends AlchemicalExcellenceModElements.ModElement {
 				if (blockAt.getBlock() == Blocks.NETHERRACK.getDefaultState().getBlock())
 					blockCriteria = true;
 				return blockCriteria;
-			}), block.getDefaultState(), 3)).withPlacement(Placement.COUNT_RANGE.configure(new CountRangeConfig(10, 0, 0, 66))));
+			}), block.getDefaultState(), 5)).withPlacement(Placement.COUNT_RANGE.configure(new CountRangeConfig(12, 0, 0, 66))));
 		}
 	}
 }
