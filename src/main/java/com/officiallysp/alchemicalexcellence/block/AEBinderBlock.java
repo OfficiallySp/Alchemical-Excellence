@@ -5,14 +5,12 @@ import net.minecraftforge.registries.ObjectHolder;
 import net.minecraftforge.items.wrapper.SidedInvWrapper;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.CapabilityItemHandler;
+import net.minecraftforge.fml.network.NetworkHooks;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.common.capabilities.Capability;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.storage.loot.LootContext;
 import net.minecraft.world.World;
@@ -29,6 +27,7 @@ import net.minecraft.tileentity.TileEntityType;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.tileentity.LockableLootTileEntity;
 import net.minecraft.network.play.server.SUpdateTileEntityPacket;
+import net.minecraft.network.PacketBuffer;
 import net.minecraft.network.NetworkManager;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.item.ItemStack;
@@ -36,14 +35,12 @@ import net.minecraft.item.Item;
 import net.minecraft.item.BlockItem;
 import net.minecraft.inventory.container.INamedContainerProvider;
 import net.minecraft.inventory.container.Container;
-import net.minecraft.inventory.container.ChestContainer;
 import net.minecraft.inventory.ItemStackHelper;
 import net.minecraft.inventory.InventoryHelper;
 import net.minecraft.inventory.ISidedInventory;
+import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.client.renderer.RenderTypeLookup;
-import net.minecraft.client.renderer.RenderType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.BlockState;
@@ -55,17 +52,20 @@ import java.util.stream.IntStream;
 import java.util.List;
 import java.util.Collections;
 
+import io.netty.buffer.Unpooled;
+
 import com.officiallysp.alchemicalexcellence.itemgroup.AECreativetabItemGroup;
+import com.officiallysp.alchemicalexcellence.gui.BinderGUIGui;
 import com.officiallysp.alchemicalexcellence.AlchemicalExcellenceModElements;
 
 @AlchemicalExcellenceModElements.ModElement.Tag
-public class AEChestBlock extends AlchemicalExcellenceModElements.ModElement {
-	@ObjectHolder("alchemical_excellence:ae_chest")
+public class AEBinderBlock extends AlchemicalExcellenceModElements.ModElement {
+	@ObjectHolder("alchemical_excellence:ae_binder")
 	public static final Block block = null;
-	@ObjectHolder("alchemical_excellence:ae_chest")
+	@ObjectHolder("alchemical_excellence:ae_binder")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
-	public AEChestBlock(AlchemicalExcellenceModElements instance) {
-		super(instance, 17);
+	public AEBinderBlock(AlchemicalExcellenceModElements instance) {
+		super(instance, 18);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 
@@ -78,28 +78,12 @@ public class AEChestBlock extends AlchemicalExcellenceModElements.ModElement {
 
 	@SubscribeEvent
 	public void registerTileEntity(RegistryEvent.Register<TileEntityType<?>> event) {
-		event.getRegistry().register(TileEntityType.Builder.create(CustomTileEntity::new, block).build(null).setRegistryName("ae_chest"));
-	}
-
-	@Override
-	@OnlyIn(Dist.CLIENT)
-	public void clientLoad(FMLClientSetupEvent event) {
-		RenderTypeLookup.setRenderLayer(block, RenderType.getCutout());
+		event.getRegistry().register(TileEntityType.Builder.create(CustomTileEntity::new, block).build(null).setRegistryName("ae_binder"));
 	}
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.ROCK).sound(SoundType.GROUND).hardnessAndResistance(1f, 10f).lightValue(0).notSolid());
-			setRegistryName("ae_chest");
-		}
-
-		@Override
-		public boolean isNormalCube(BlockState state, IBlockReader worldIn, BlockPos pos) {
-			return false;
-		}
-
-		@Override
-		public boolean propagatesSkylightDown(BlockState state, IBlockReader reader, BlockPos pos) {
-			return true;
+			super(Block.Properties.create(Material.ROCK).sound(SoundType.GROUND).hardnessAndResistance(1f, 10f).lightValue(0));
+			setRegistryName("ae_binder");
 		}
 
 		@Override
@@ -117,6 +101,20 @@ public class AEChestBlock extends AlchemicalExcellenceModElements.ModElement {
 			int x = pos.getX();
 			int y = pos.getY();
 			int z = pos.getZ();
+			if (entity instanceof ServerPlayerEntity) {
+				NetworkHooks.openGui((ServerPlayerEntity) entity, new INamedContainerProvider() {
+					@Override
+					public ITextComponent getDisplayName() {
+						return new StringTextComponent("AE Binder");
+					}
+
+					@Override
+					public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+						return new BinderGUIGui.GuiContainerMod(id, inventory,
+								new PacketBuffer(Unpooled.buffer()).writeBlockPos(new BlockPos(x, y, z)));
+					}
+				}, new BlockPos(x, y, z));
+			}
 			return ActionResultType.SUCCESS;
 		}
 
@@ -171,7 +169,7 @@ public class AEChestBlock extends AlchemicalExcellenceModElements.ModElement {
 	}
 
 	public static class CustomTileEntity extends LockableLootTileEntity implements ISidedInventory {
-		private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(99, ItemStack.EMPTY);
+		private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(13, ItemStack.EMPTY);
 		protected CustomTileEntity() {
 			super(tileEntityType);
 		}
@@ -224,22 +222,22 @@ public class AEChestBlock extends AlchemicalExcellenceModElements.ModElement {
 
 		@Override
 		public ITextComponent getDefaultName() {
-			return new StringTextComponent("ae_chest");
+			return new StringTextComponent("ae_binder");
 		}
 
 		@Override
 		public int getInventoryStackLimit() {
-			return 64;
+			return 1;
 		}
 
 		@Override
 		public Container createMenu(int id, PlayerInventory player) {
-			return ChestContainer.createGeneric9X3(id, player, this);
+			return new BinderGUIGui.GuiContainerMod(id, player, new PacketBuffer(Unpooled.buffer()).writeBlockPos(this.getPos()));
 		}
 
 		@Override
 		public ITextComponent getDisplayName() {
-			return new StringTextComponent("AE Chest");
+			return new StringTextComponent("AE Binder");
 		}
 
 		@Override

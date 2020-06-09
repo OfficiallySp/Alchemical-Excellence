@@ -147,13 +147,22 @@
       "registry_name": "ae_coal_x_fuel"
     },
     {
-      "name": "AEChest",
+      "name": "AEBinder",
       "type": "block",
-      "sortid": 17,
+      "sortid": 18,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "ae_chest"
+      "registry_name": "ae_binder"
+    },
+    {
+      "name": "BinderGUI",
+      "type": "gui",
+      "sortid": 19,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "binder_gui"
     }
   ],
   "variable_elements": [],
@@ -161,15 +170,15 @@
   "language_map": {
     "en_us": {
       "block.alchemical_excellence.ae_ore": "Alchemical Fragment Ore",
-      "block.alchemical_excellence.ae_infuser": "Infuser",
-      "item.alchemical_excellence.ae_coal_x": "Alchemical Coal",
-      "item.alchemical_excellence.ae_paxel": "AE Paxel",
       "itemGroup.tabae_creativetab": "Alchemical Excellence",
-      "item.alchemical_excellence.ae_shard": "Alchemical Shard",
       "item.alchemical_excellence.ae_coal": "Lesser Alchemical Coal",
       "item.alchemical_excellence.ae_fragment": "AE Fragment",
-      "block.alchemical_excellence.ae_chest": "AE Chest",
-      "block.alchemical_excellence.ae_block": "AE Block"
+      "block.alchemical_excellence.ae_block": "AE Block",
+      "item.alchemical_excellence.ae_coal_x": "Alchemical Coal",
+      "block.alchemical_excellence.ae_infuser": "Infuser",
+      "item.alchemical_excellence.ae_paxel": "AE Paxel",
+      "item.alchemical_excellence.ae_shard": "Alchemical Shard",
+      "block.alchemical_excellence.ae_binder": "AE Binder"
     }
   },
   "workspaceSettings": {
