@@ -29,6 +29,7 @@ import net.minecraft.inventory.container.Container;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.client.gui.widget.button.Button;
 import net.minecraft.client.gui.screen.inventory.ContainerScreen;
 import net.minecraft.client.gui.ScreenManager;
 import net.minecraft.client.Minecraft;
@@ -37,8 +38,6 @@ import java.util.function.Supplier;
 import java.util.Map;
 import java.util.HashMap;
 
-import com.officiallysp.alchemicalexcellence.procedures.InfuserDataProcedure;
-import com.officiallysp.alchemicalexcellence.item.AEFragmentItem;
 import com.officiallysp.alchemicalexcellence.AlchemicalExcellenceModElements;
 import com.officiallysp.alchemicalexcellence.AlchemicalExcellenceMod;
 
@@ -82,7 +81,7 @@ public class InfuserGUIGui extends AlchemicalExcellenceModElements.ModElement {
 			super(containerType, id);
 			this.entity = inv.player;
 			this.world = inv.player.world;
-			this.internal = new ItemStackHandler(13);
+			this.internal = new ItemStackHandler(3);
 			BlockPos pos = null;
 			if (extraData != null) {
 				pos = extraData.readBlockPos();
@@ -112,157 +111,11 @@ public class InfuserGUIGui extends AlchemicalExcellenceModElements.ModElement {
 					}
 				}
 			}
-			this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 88, 7) {
-				@Override
-				public void onSlotChanged() {
-					super.onSlotChanged();
-					GuiContainerMod.this.slotChanged(0, 0, 0);
-				}
-
-				@Override
-				public boolean isItemValid(ItemStack stack) {
-					return (new ItemStack(AEFragmentItem.block, (int) (1)).getItem() == stack.getItem());
-				}
+			this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 25, 48) {
 			}));
-			this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 61, 16) {
-				@Override
-				public void onSlotChanged() {
-					super.onSlotChanged();
-					GuiContainerMod.this.slotChanged(1, 0, 0);
-				}
-
-				@Override
-				public boolean isItemValid(ItemStack stack) {
-					return (new ItemStack(AEFragmentItem.block, (int) (1)).getItem() == stack.getItem());
-				}
+			this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 52, 57) {
 			}));
-			this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 34, 34) {
-				@Override
-				public void onSlotChanged() {
-					super.onSlotChanged();
-					GuiContainerMod.this.slotChanged(2, 0, 0);
-				}
-
-				@Override
-				public boolean isItemValid(ItemStack stack) {
-					return (new ItemStack(AEFragmentItem.block, (int) (1)).getItem() == stack.getItem());
-				}
-			}));
-			this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 7, 52) {
-				@Override
-				public void onSlotChanged() {
-					super.onSlotChanged();
-					GuiContainerMod.this.slotChanged(3, 0, 0);
-				}
-
-				@Override
-				public boolean isItemValid(ItemStack stack) {
-					return (new ItemStack(AEFragmentItem.block, (int) (1)).getItem() == stack.getItem());
-				}
-			}));
-			this.customSlots.put(4, this.addSlot(new SlotItemHandler(internal, 4, 34, 70) {
-				@Override
-				public void onSlotChanged() {
-					super.onSlotChanged();
-					GuiContainerMod.this.slotChanged(4, 0, 0);
-				}
-
-				@Override
-				public boolean isItemValid(ItemStack stack) {
-					return (new ItemStack(AEFragmentItem.block, (int) (1)).getItem() == stack.getItem());
-				}
-			}));
-			this.customSlots.put(5, this.addSlot(new SlotItemHandler(internal, 5, 61, 88) {
-				@Override
-				public void onSlotChanged() {
-					super.onSlotChanged();
-					GuiContainerMod.this.slotChanged(5, 0, 0);
-				}
-
-				@Override
-				public boolean isItemValid(ItemStack stack) {
-					return (new ItemStack(AEFragmentItem.block, (int) (1)).getItem() == stack.getItem());
-				}
-			}));
-			this.customSlots.put(6, this.addSlot(new SlotItemHandler(internal, 6, 88, 88) {
-				@Override
-				public void onSlotChanged() {
-					super.onSlotChanged();
-					GuiContainerMod.this.slotChanged(6, 0, 0);
-				}
-
-				@Override
-				public boolean isItemValid(ItemStack stack) {
-					return (new ItemStack(AEFragmentItem.block, (int) (1)).getItem() == stack.getItem());
-				}
-			}));
-			this.customSlots.put(7, this.addSlot(new SlotItemHandler(internal, 7, 115, 88) {
-				@Override
-				public void onSlotChanged() {
-					super.onSlotChanged();
-					GuiContainerMod.this.slotChanged(7, 0, 0);
-				}
-
-				@Override
-				public boolean isItemValid(ItemStack stack) {
-					return (new ItemStack(AEFragmentItem.block, (int) (1)).getItem() == stack.getItem());
-				}
-			}));
-			this.customSlots.put(8, this.addSlot(new SlotItemHandler(internal, 8, 142, 70) {
-				@Override
-				public void onSlotChanged() {
-					super.onSlotChanged();
-					GuiContainerMod.this.slotChanged(8, 0, 0);
-				}
-
-				@Override
-				public boolean isItemValid(ItemStack stack) {
-					return (new ItemStack(AEFragmentItem.block, (int) (1)).getItem() == stack.getItem());
-				}
-			}));
-			this.customSlots.put(9, this.addSlot(new SlotItemHandler(internal, 9, 169, 52) {
-				@Override
-				public void onSlotChanged() {
-					super.onSlotChanged();
-					GuiContainerMod.this.slotChanged(9, 0, 0);
-				}
-
-				@Override
-				public boolean isItemValid(ItemStack stack) {
-					return (new ItemStack(AEFragmentItem.block, (int) (1)).getItem() == stack.getItem());
-				}
-			}));
-			this.customSlots.put(10, this.addSlot(new SlotItemHandler(internal, 10, 142, 34) {
-				@Override
-				public void onSlotChanged() {
-					super.onSlotChanged();
-					GuiContainerMod.this.slotChanged(10, 0, 0);
-				}
-
-				@Override
-				public boolean isItemValid(ItemStack stack) {
-					return (new ItemStack(AEFragmentItem.block, (int) (1)).getItem() == stack.getItem());
-				}
-			}));
-			this.customSlots.put(11, this.addSlot(new SlotItemHandler(internal, 11, 115, 16) {
-				@Override
-				public void onSlotChanged() {
-					super.onSlotChanged();
-					GuiContainerMod.this.slotChanged(11, 0, 0);
-				}
-
-				@Override
-				public boolean isItemValid(ItemStack stack) {
-					return (new ItemStack(AEFragmentItem.block, (int) (1)).getItem() == stack.getItem());
-				}
-			}));
-			this.customSlots.put(12, this.addSlot(new SlotItemHandler(internal, 12, 88, 52) {
-				@Override
-				public void onSlotChanged() {
-					super.onSlotChanged();
-					GuiContainerMod.this.slotChanged(12, 0, 0);
-				}
-
+			this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 133, 57) {
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return false;
@@ -272,9 +125,9 @@ public class InfuserGUIGui extends AlchemicalExcellenceModElements.ModElement {
 			int sj;
 			for (si = 0; si < 3; ++si)
 				for (sj = 0; sj < 9; ++sj)
-					this.addSlot(new Slot(inv, sj + (si + 1) * 9, 9 + 8 + sj * 18, 31 + 84 + si * 18));
+					this.addSlot(new Slot(inv, sj + (si + 1) * 9, 0 + 8 + sj * 18, 0 + 84 + si * 18));
 			for (si = 0; si < 9; ++si)
-				this.addSlot(new Slot(inv, si, 9 + 8 + si * 18, 31 + 142));
+				this.addSlot(new Slot(inv, si, 0 + 8 + si * 18, 0 + 142));
 		}
 
 		public Map<Integer, Slot> get() {
@@ -293,18 +146,18 @@ public class InfuserGUIGui extends AlchemicalExcellenceModElements.ModElement {
 			if (slot != null && slot.getHasStack()) {
 				ItemStack itemstack1 = slot.getStack();
 				itemstack = itemstack1.copy();
-				if (index < 13) {
-					if (!this.mergeItemStack(itemstack1, 13, this.inventorySlots.size(), true)) {
+				if (index < 3) {
+					if (!this.mergeItemStack(itemstack1, 3, this.inventorySlots.size(), true)) {
 						return ItemStack.EMPTY;
 					}
 					slot.onSlotChange(itemstack1, itemstack);
-				} else if (!this.mergeItemStack(itemstack1, 0, 13, false)) {
-					if (index < 13 + 27) {
-						if (!this.mergeItemStack(itemstack1, 13 + 27, this.inventorySlots.size(), true)) {
+				} else if (!this.mergeItemStack(itemstack1, 0, 3, false)) {
+					if (index < 3 + 27) {
+						if (!this.mergeItemStack(itemstack1, 3 + 27, this.inventorySlots.size(), true)) {
 							return ItemStack.EMPTY;
 						}
 					} else {
-						if (!this.mergeItemStack(itemstack1, 13, 13 + 27, false)) {
+						if (!this.mergeItemStack(itemstack1, 3, 3 + 27, false)) {
 							return ItemStack.EMPTY;
 						}
 					}
@@ -441,8 +294,8 @@ public class InfuserGUIGui extends AlchemicalExcellenceModElements.ModElement {
 			this.y = container.y;
 			this.z = container.z;
 			this.entity = container.entity;
-			this.xSize = 193;
-			this.ySize = 228;
+			this.xSize = 176;
+			this.ySize = 166;
 		}
 		private static final ResourceLocation texture = new ResourceLocation("alchemical_excellence:textures/infuser_gui.png");
 		@Override
@@ -468,7 +321,7 @@ public class InfuserGUIGui extends AlchemicalExcellenceModElements.ModElement {
 
 		@Override
 		protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) {
-			this.font.drawString("Binder", 6, 6, -16777216);
+			this.font.drawString("Infuser", 16, 29, -16777216);
 		}
 
 		@Override
@@ -481,6 +334,10 @@ public class InfuserGUIGui extends AlchemicalExcellenceModElements.ModElement {
 		public void init(Minecraft minecraft, int width, int height) {
 			super.init(minecraft, width, height);
 			minecraft.keyboardListener.enableRepeatEvents(true);
+			this.addButton(new Button(this.guiLeft + 79, this.guiTop + 56, 45, 20, "Bind", e -> {
+				AlchemicalExcellenceMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(0, x, y, z));
+				handleButtonAction(entity, 0, x, y, z);
+			}));
 		}
 	}
 
@@ -577,135 +434,5 @@ public class InfuserGUIGui extends AlchemicalExcellenceModElements.ModElement {
 		// security measure to prevent arbitrary chunk generation
 		if (!world.isBlockLoaded(new BlockPos(x, y, z)))
 			return;
-		if (slotID == 0 && changeType == 0) {
-			{
-				java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				InfuserDataProcedure.executeProcedure($_dependencies);
-			}
-		}
-		if (slotID == 1 && changeType == 0) {
-			{
-				java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				InfuserDataProcedure.executeProcedure($_dependencies);
-			}
-		}
-		if (slotID == 2 && changeType == 0) {
-			{
-				java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				InfuserDataProcedure.executeProcedure($_dependencies);
-			}
-		}
-		if (slotID == 3 && changeType == 0) {
-			{
-				java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				InfuserDataProcedure.executeProcedure($_dependencies);
-			}
-		}
-		if (slotID == 4 && changeType == 0) {
-			{
-				java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				InfuserDataProcedure.executeProcedure($_dependencies);
-			}
-		}
-		if (slotID == 5 && changeType == 0) {
-			{
-				java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				InfuserDataProcedure.executeProcedure($_dependencies);
-			}
-		}
-		if (slotID == 6 && changeType == 0) {
-			{
-				java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				InfuserDataProcedure.executeProcedure($_dependencies);
-			}
-		}
-		if (slotID == 7 && changeType == 0) {
-			{
-				java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				InfuserDataProcedure.executeProcedure($_dependencies);
-			}
-		}
-		if (slotID == 8 && changeType == 0) {
-			{
-				java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				InfuserDataProcedure.executeProcedure($_dependencies);
-			}
-		}
-		if (slotID == 9 && changeType == 0) {
-			{
-				java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				InfuserDataProcedure.executeProcedure($_dependencies);
-			}
-		}
-		if (slotID == 10 && changeType == 0) {
-			{
-				java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				InfuserDataProcedure.executeProcedure($_dependencies);
-			}
-		}
-		if (slotID == 11 && changeType == 0) {
-			{
-				java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				InfuserDataProcedure.executeProcedure($_dependencies);
-			}
-		}
-		if (slotID == 12 && changeType == 0) {
-			{
-				java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				InfuserDataProcedure.executeProcedure($_dependencies);
-			}
-		}
 	}
 }

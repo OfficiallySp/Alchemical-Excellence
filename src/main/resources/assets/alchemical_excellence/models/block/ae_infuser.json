@@ -1,12 +1,12 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "alchemical_excellence:blocks/infusersides",
-    "up": "alchemical_excellence:blocks/infusertop",
-    "north": "alchemical_excellence:blocks/infusersides",
-    "east": "alchemical_excellence:blocks/infusersides",
-    "south": "alchemical_excellence:blocks/infusersides",
-    "west": "alchemical_excellence:blocks/infusersides",
-    "particle": "alchemical_excellence:blocks/infusersides"
+    "down": "alchemical_excellence:blocks/bindersides",
+    "up": "alchemical_excellence:blocks/bindertop",
+    "north": "alchemical_excellence:blocks/bindersides",
+    "east": "alchemical_excellence:blocks/bindersides",
+    "south": "alchemical_excellence:blocks/bindersides",
+    "west": "alchemical_excellence:blocks/bindersides",
+    "particle": "alchemical_excellence:blocks/bindersides"
   }
 }

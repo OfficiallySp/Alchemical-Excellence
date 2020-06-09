@@ -2,12 +2,12 @@
   "_fv": 8,
   "_type": "block",
   "definition": {
-    "texture": "bindersides",
-    "textureTop": "bindertop",
-    "textureLeft": "bindersides",
-    "textureFront": "bindersides",
-    "textureRight": "bindersides",
-    "textureBack": "bindersides",
+    "texture": "aechesttop",
+    "textureTop": "aechesttop",
+    "textureLeft": "aechestside",
+    "textureFront": "aechestside",
+    "textureRight": "aechestside",
+    "textureBack": "aechestside",
     "renderType": 10,
     "customModelName": "Normal",
     "rotationMode": 0,
@@ -20,7 +20,7 @@
     "Mx": 1.0,
     "My": 1.0,
     "Mz": 1.0,
-    "name": "AE Binder",
+    "name": "AE Chest",
     "specialInfo": [],
     "hardness": 1.0,
     "resistance": 10.0,
@@ -39,7 +39,7 @@
     "canProvidePower": false,
     "lightOpacity": 0,
     "material": {
-      "value": "MISCELLANEOUS"
+      "value": "ROCK"
     },
     "tickRate": 10,
     "tickRandomly": false,
@@ -57,7 +57,7 @@
     "reactionToPushing": "NORMAL",
     "isNotColidable": false,
     "soundOnStep": {
-      "value": "ANVIL"
+      "value": "GROUND"
     },
     "luminance": 0.0,
     "unbreakable": false,
@@ -71,19 +71,14 @@
     "particleAmount": 4,
     "particleSpawningCondition": "ALWAYS",
     "hasInventory": true,
-    "guiBoundTo": "BinderGUI",
+    "guiBoundTo": "<NONE>",
     "openGUIOnRightClick": true,
-    "inventorySize": 4,
-    "inventoryStackSize": 1,
+    "inventorySize": 99,
+    "inventoryStackSize": 64,
     "inventoryDropWhenDestroyed": true,
     "inventoryComparatorPower": true,
-    "inventoryOutSlotIDs": [
-      2
-    ],
-    "inventoryInSlotIDs": [
-      0,
-      1
-    ],
+    "inventoryOutSlotIDs": [],
+    "inventoryInSlotIDs": [],
     "spawnWorldTypes": [],
     "restrictionBiomes": [],
     "blocksToReplace": [

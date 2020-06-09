@@ -2,16 +2,16 @@
   "_fv": 8,
   "_type": "block",
   "definition": {
-    "texture": "infusersides",
-    "textureTop": "infusertop",
-    "textureLeft": "infusersides",
-    "textureFront": "infusersides",
-    "textureRight": "infusersides",
-    "textureBack": "infusersides",
+    "texture": "bindersides",
+    "textureTop": "bindertop",
+    "textureLeft": "bindersides",
+    "textureFront": "bindersides",
+    "textureRight": "bindersides",
+    "textureBack": "bindersides",
     "renderType": 10,
     "customModelName": "Normal",
     "rotationMode": 0,
-    "hasTransparency": false,
+    "hasTransparency": true,
     "connectedSides": false,
     "transparencyType": "SOLID",
     "mx": 0.0,
@@ -20,7 +20,7 @@
     "Mx": 1.0,
     "My": 1.0,
     "Mz": 1.0,
-    "name": "AE Infuser",
+    "name": "Infuser",
     "specialInfo": [],
     "hardness": 1.0,
     "resistance": 10.0,
@@ -28,7 +28,7 @@
     "creativeTab": {
       "value": "CUSTOM:AECreativetab"
     },
-    "destroyTool": "pickaxe",
+    "destroyTool": "Not specified",
     "customDrop": {
       "value": ""
     },
@@ -37,9 +37,9 @@
     "enchantPowerBonus": 0.0,
     "plantsGrowOn": false,
     "canProvidePower": false,
-    "lightOpacity": 255,
+    "lightOpacity": 0,
     "material": {
-      "value": "ROCK"
+      "value": "MISCELLANEOUS"
     },
     "tickRate": 10,
     "tickRandomly": false,
@@ -57,7 +57,7 @@
     "reactionToPushing": "NORMAL",
     "isNotColidable": false,
     "soundOnStep": {
-      "value": "METAL"
+      "value": "ANVIL"
     },
     "luminance": 0.0,
     "unbreakable": false,
@@ -73,12 +73,17 @@
     "hasInventory": true,
     "guiBoundTo": "InfuserGUI",
     "openGUIOnRightClick": true,
-    "inventorySize": 13,
+    "inventorySize": 4,
     "inventoryStackSize": 1,
     "inventoryDropWhenDestroyed": true,
     "inventoryComparatorPower": true,
-    "inventoryOutSlotIDs": [],
-    "inventoryInSlotIDs": [],
+    "inventoryOutSlotIDs": [
+      2
+    ],
+    "inventoryInSlotIDs": [
+      0,
+      1
+    ],
     "spawnWorldTypes": [],
     "restrictionBiomes": [],
     "blocksToReplace": [

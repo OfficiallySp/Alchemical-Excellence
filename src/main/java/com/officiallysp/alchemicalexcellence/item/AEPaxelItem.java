@@ -31,7 +31,7 @@ public class AEPaxelItem extends AlchemicalExcellenceModElements.ModElement {
 	@ObjectHolder("alchemical_excellence:ae_paxel")
 	public static final Item block = null;
 	public AEPaxelItem(AlchemicalExcellenceModElements instance) {
-		super(instance, 10);
+		super(instance, 6);
 	}
 
 	@Override

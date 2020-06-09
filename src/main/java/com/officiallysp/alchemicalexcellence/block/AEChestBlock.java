@@ -5,7 +5,6 @@ import net.minecraftforge.registries.ObjectHolder;
 import net.minecraftforge.items.wrapper.SidedInvWrapper;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.CapabilityItemHandler;
-import net.minecraftforge.fml.network.NetworkHooks;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -30,7 +29,6 @@ import net.minecraft.tileentity.TileEntityType;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.tileentity.LockableLootTileEntity;
 import net.minecraft.network.play.server.SUpdateTileEntityPacket;
-import net.minecraft.network.PacketBuffer;
 import net.minecraft.network.NetworkManager;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.item.ItemStack;
@@ -38,10 +36,10 @@ import net.minecraft.item.Item;
 import net.minecraft.item.BlockItem;
 import net.minecraft.inventory.container.INamedContainerProvider;
 import net.minecraft.inventory.container.Container;
+import net.minecraft.inventory.container.ChestContainer;
 import net.minecraft.inventory.ItemStackHelper;
 import net.minecraft.inventory.InventoryHelper;
 import net.minecraft.inventory.ISidedInventory;
-import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.client.renderer.RenderTypeLookup;
@@ -57,20 +55,17 @@ import java.util.stream.IntStream;
 import java.util.List;
 import java.util.Collections;
 
-import io.netty.buffer.Unpooled;
-
 import com.officiallysp.alchemicalexcellence.itemgroup.AECreativetabItemGroup;
-import com.officiallysp.alchemicalexcellence.gui.BinderGUIGui;
 import com.officiallysp.alchemicalexcellence.AlchemicalExcellenceModElements;
 
 @AlchemicalExcellenceModElements.ModElement.Tag
-public class AEBinderBlock extends AlchemicalExcellenceModElements.ModElement {
-	@ObjectHolder("alchemical_excellence:ae_binder")
+public class AEChestBlock extends AlchemicalExcellenceModElements.ModElement {
+	@ObjectHolder("alchemical_excellence:ae_chest")
 	public static final Block block = null;
-	@ObjectHolder("alchemical_excellence:ae_binder")
+	@ObjectHolder("alchemical_excellence:ae_chest")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
-	public AEBinderBlock(AlchemicalExcellenceModElements instance) {
-		super(instance, 12);
+	public AEChestBlock(AlchemicalExcellenceModElements instance) {
+		super(instance, 17);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 
@@ -83,7 +78,7 @@ public class AEBinderBlock extends AlchemicalExcellenceModElements.ModElement {
 
 	@SubscribeEvent
 	public void registerTileEntity(RegistryEvent.Register<TileEntityType<?>> event) {
-		event.getRegistry().register(TileEntityType.Builder.create(CustomTileEntity::new, block).build(null).setRegistryName("ae_binder"));
+		event.getRegistry().register(TileEntityType.Builder.create(CustomTileEntity::new, block).build(null).setRegistryName("ae_chest"));
 	}
 
 	@Override
@@ -93,8 +88,8 @@ public class AEBinderBlock extends AlchemicalExcellenceModElements.ModElement {
 	}
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.MISCELLANEOUS).sound(SoundType.ANVIL).hardnessAndResistance(1f, 10f).lightValue(0).notSolid());
-			setRegistryName("ae_binder");
+			super(Block.Properties.create(Material.ROCK).sound(SoundType.GROUND).hardnessAndResistance(1f, 10f).lightValue(0).notSolid());
+			setRegistryName("ae_chest");
 		}
 
 		@Override
@@ -122,20 +117,6 @@ public class AEBinderBlock extends AlchemicalExcellenceModElements.ModElement {
 			int x = pos.getX();
 			int y = pos.getY();
 			int z = pos.getZ();
-			if (entity instanceof ServerPlayerEntity) {
-				NetworkHooks.openGui((ServerPlayerEntity) entity, new INamedContainerProvider() {
-					@Override
-					public ITextComponent getDisplayName() {
-						return new StringTextComponent("AE Binder");
-					}
-
-					@Override
-					public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
-						return new BinderGUIGui.GuiContainerMod(id, inventory,
-								new PacketBuffer(Unpooled.buffer()).writeBlockPos(new BlockPos(x, y, z)));
-					}
-				}, new BlockPos(x, y, z));
-			}
 			return ActionResultType.SUCCESS;
 		}
 
@@ -190,7 +171,7 @@ public class AEBinderBlock extends AlchemicalExcellenceModElements.ModElement {
 	}
 
 	public static class CustomTileEntity extends LockableLootTileEntity implements ISidedInventory {
-		private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(4, ItemStack.EMPTY);
+		private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(99, ItemStack.EMPTY);
 		protected CustomTileEntity() {
 			super(tileEntityType);
 		}
@@ -243,22 +224,22 @@ public class AEBinderBlock extends AlchemicalExcellenceModElements.ModElement {
 
 		@Override
 		public ITextComponent getDefaultName() {
-			return new StringTextComponent("ae_binder");
+			return new StringTextComponent("ae_chest");
 		}
 
 		@Override
 		public int getInventoryStackLimit() {
-			return 1;
+			return 64;
 		}
 
 		@Override
 		public Container createMenu(int id, PlayerInventory player) {
-			return new BinderGUIGui.GuiContainerMod(id, player, new PacketBuffer(Unpooled.buffer()).writeBlockPos(this.getPos()));
+			return ChestContainer.createGeneric9X3(id, player, this);
 		}
 
 		@Override
 		public ITextComponent getDisplayName() {
-			return new StringTextComponent("AE Binder");
+			return new StringTextComponent("AE Chest");
 		}
 
 		@Override
@@ -273,8 +254,6 @@ public class AEBinderBlock extends AlchemicalExcellenceModElements.ModElement {
 
 		@Override
 		public boolean isItemValidForSlot(int index, ItemStack stack) {
-			if (index == 2)
-				return false;
 			return true;
 		}
 
@@ -290,10 +269,6 @@ public class AEBinderBlock extends AlchemicalExcellenceModElements.ModElement {
 
 		@Override
 		public boolean canExtractItem(int index, ItemStack stack, Direction direction) {
-			if (index == 0)
-				return false;
-			if (index == 1)
-				return false;
 			return true;
 		}
 		private final LazyOptional<? extends IItemHandler>[] handlers = SidedInvWrapper.create(this, Direction.values());
