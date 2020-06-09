@@ -79,7 +79,7 @@ public class AEPaxelItem extends AlchemicalExcellenceModElements.ModElement {
 			Multimap<String, AttributeModifier> multimap = super.getAttributeModifiers(equipmentSlot);
 			if (equipmentSlot == EquipmentSlotType.MAINHAND) {
 				multimap.put(SharedMonsterAttributes.ATTACK_DAMAGE.getName(),
-						new AttributeModifier(ATTACK_DAMAGE_MODIFIER, "Tool modifier", -2f, AttributeModifier.Operation.ADDITION));
+						new AttributeModifier(ATTACK_DAMAGE_MODIFIER, "Tool modifier", -1f, AttributeModifier.Operation.ADDITION));
 				multimap.put(SharedMonsterAttributes.ATTACK_SPEED.getName(),
 						new AttributeModifier(ATTACK_SPEED_MODIFIER, "Tool modifier", 1, AttributeModifier.Operation.ADDITION));
 			}
@@ -93,7 +93,7 @@ public class AEPaxelItem extends AlchemicalExcellenceModElements.ModElement {
 
 		@Override
 		public float getDestroySpeed(ItemStack itemstack, BlockState blockstate) {
-			return 30f;
+			return 15.5f;
 		}
 
 		@Override

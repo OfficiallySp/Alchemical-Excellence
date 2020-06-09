@@ -51,7 +51,7 @@ public class AEPaxelBlockDestroyedWithToolProcedure extends AlchemicalExcellence
 		int z = (int) dependencies.get("z");
 		ItemStack itemstack = (ItemStack) dependencies.get("itemstack");
 		World world = (World) dependencies.get("world");
-		if ((Math.random() < 0.9)) {
+		if ((Math.random() < 0.1)) {
 			if (!world.isRemote) {
 				world.addEntity(new ExperienceOrbEntity(world, x, y, z, (int) 10));
 			}
@@ -62,7 +62,7 @@ public class AEPaxelBlockDestroyedWithToolProcedure extends AlchemicalExcellence
 					(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.note_block.bell")),
 					SoundCategory.NEUTRAL, (float) 1, (float) 1);
 		}
-		if ((Math.random() < 0.9)) {
+		if ((Math.random() < 0.1)) {
 			if (!world.isRemote) {
 				world.createExplosion(null, (int) x, (int) y, (int) z, (float) 1, Explosion.Mode.BREAK);
 			}
@@ -73,7 +73,7 @@ public class AEPaxelBlockDestroyedWithToolProcedure extends AlchemicalExcellence
 					(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.note_block.bell")),
 					SoundCategory.NEUTRAL, (float) 1, (float) 1);
 		}
-		if ((Math.random() < 0.9)) {
+		if ((Math.random() < 0.1)) {
 			((itemstack)).setDamage((int) 0);
 			if (entity instanceof PlayerEntity && !world.isRemote) {
 				((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("Full Repair Activated"), (true));
