@@ -1,0 +1,26 @@
+{
+  "_fv": 8,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "paxelaio",
+    "customModelName": "Normal",
+    "name": "AE Paxel",
+    "specialInfo": [
+      "The all in one multitool"
+    ],
+    "creativeTab": {
+      "value": "TOOLS"
+    },
+    "toolType": "MultiTool",
+    "harvestLevel": 4,
+    "efficiency": 15.0,
+    "attackSpeed": 2.0,
+    "enchantability": 2,
+    "damageVsEntity": 1.0,
+    "usageCount": 100,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": []
+  }
+}
