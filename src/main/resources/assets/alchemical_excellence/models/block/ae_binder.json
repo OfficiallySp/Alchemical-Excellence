@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "alchemical_excellence:blocks/bindersides",
+    "up": "alchemical_excellence:blocks/bindertop",
+    "north": "alchemical_excellence:blocks/bindersides",
+    "east": "alchemical_excellence:blocks/bindersides",
+    "south": "alchemical_excellence:blocks/bindersides",
+    "west": "alchemical_excellence:blocks/bindersides",
+    "particle": "alchemical_excellence:blocks/bindersides"
+  }
+}

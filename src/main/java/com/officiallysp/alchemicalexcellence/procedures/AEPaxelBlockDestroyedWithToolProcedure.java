@@ -17,7 +17,7 @@ import com.officiallysp.alchemicalexcellence.AlchemicalExcellenceModElements;
 @AlchemicalExcellenceModElements.ModElement.Tag
 public class AEPaxelBlockDestroyedWithToolProcedure extends AlchemicalExcellenceModElements.ModElement {
 	public AEPaxelBlockDestroyedWithToolProcedure(AlchemicalExcellenceModElements instance) {
-		super(instance, 11);
+		super(instance, 10);
 	}
 
 	public static void executeProcedure(java.util.HashMap<String, Object> dependencies) {

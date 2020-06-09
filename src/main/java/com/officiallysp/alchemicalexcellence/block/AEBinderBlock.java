@@ -7,11 +7,13 @@ import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.fml.network.NetworkHooks;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.common.capabilities.Capability;
-import net.minecraftforge.common.ToolType;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.storage.loot.LootContext;
 import net.minecraft.world.World;
@@ -42,6 +44,8 @@ import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.client.renderer.RenderTypeLookup;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.BlockState;
@@ -56,17 +60,17 @@ import java.util.Collections;
 import io.netty.buffer.Unpooled;
 
 import com.officiallysp.alchemicalexcellence.itemgroup.AECreativetabItemGroup;
-import com.officiallysp.alchemicalexcellence.gui.InfuserGUIGui;
+import com.officiallysp.alchemicalexcellence.gui.BinderGUIGui;
 import com.officiallysp.alchemicalexcellence.AlchemicalExcellenceModElements;
 
 @AlchemicalExcellenceModElements.ModElement.Tag
-public class AEInfuserBlock extends AlchemicalExcellenceModElements.ModElement {
-	@ObjectHolder("alchemical_excellence:ae_infuser")
+public class AEBinderBlock extends AlchemicalExcellenceModElements.ModElement {
+	@ObjectHolder("alchemical_excellence:ae_binder")
 	public static final Block block = null;
-	@ObjectHolder("alchemical_excellence:ae_infuser")
+	@ObjectHolder("alchemical_excellence:ae_binder")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
-	public AEInfuserBlock(AlchemicalExcellenceModElements instance) {
-		super(instance, 3);
+	public AEBinderBlock(AlchemicalExcellenceModElements instance) {
+		super(instance, 12);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 
@@ -79,13 +83,28 @@ public class AEInfuserBlock extends AlchemicalExcellenceModElements.ModElement {
 
 	@SubscribeEvent
 	public void registerTileEntity(RegistryEvent.Register<TileEntityType<?>> event) {
-		event.getRegistry().register(TileEntityType.Builder.create(CustomTileEntity::new, block).build(null).setRegistryName("ae_infuser"));
+		event.getRegistry().register(TileEntityType.Builder.create(CustomTileEntity::new, block).build(null).setRegistryName("ae_binder"));
+	}
+
+	@Override
+	@OnlyIn(Dist.CLIENT)
+	public void clientLoad(FMLClientSetupEvent event) {
+		RenderTypeLookup.setRenderLayer(block, RenderType.getCutout());
 	}
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.ROCK).sound(SoundType.METAL).hardnessAndResistance(1f, 10f).lightValue(0).harvestLevel(1)
-					.harvestTool(ToolType.PICKAXE));
-			setRegistryName("ae_infuser");
+			super(Block.Properties.create(Material.MISCELLANEOUS).sound(SoundType.ANVIL).hardnessAndResistance(1f, 10f).lightValue(0).notSolid());
+			setRegistryName("ae_binder");
+		}
+
+		@Override
+		public boolean isNormalCube(BlockState state, IBlockReader worldIn, BlockPos pos) {
+			return false;
+		}
+
+		@Override
+		public boolean propagatesSkylightDown(BlockState state, IBlockReader reader, BlockPos pos) {
+			return true;
 		}
 
 		@Override
@@ -107,12 +126,12 @@ public class AEInfuserBlock extends AlchemicalExcellenceModElements.ModElement {
 				NetworkHooks.openGui((ServerPlayerEntity) entity, new INamedContainerProvider() {
 					@Override
 					public ITextComponent getDisplayName() {
-						return new StringTextComponent("AE Infuser");
+						return new StringTextComponent("AE Binder");
 					}
 
 					@Override
 					public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
-						return new InfuserGUIGui.GuiContainerMod(id, inventory,
+						return new BinderGUIGui.GuiContainerMod(id, inventory,
 								new PacketBuffer(Unpooled.buffer()).writeBlockPos(new BlockPos(x, y, z)));
 					}
 				}, new BlockPos(x, y, z));
@@ -171,7 +190,7 @@ public class AEInfuserBlock extends AlchemicalExcellenceModElements.ModElement {
 	}
 
 	public static class CustomTileEntity extends LockableLootTileEntity implements ISidedInventory {
-		private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(13, ItemStack.EMPTY);
+		private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(4, ItemStack.EMPTY);
 		protected CustomTileEntity() {
 			super(tileEntityType);
 		}
@@ -224,7 +243,7 @@ public class AEInfuserBlock extends AlchemicalExcellenceModElements.ModElement {
 
 		@Override
 		public ITextComponent getDefaultName() {
-			return new StringTextComponent("ae_infuser");
+			return new StringTextComponent("ae_binder");
 		}
 
 		@Override
@@ -234,12 +253,12 @@ public class AEInfuserBlock extends AlchemicalExcellenceModElements.ModElement {
 
 		@Override
 		public Container createMenu(int id, PlayerInventory player) {
-			return new InfuserGUIGui.GuiContainerMod(id, player, new PacketBuffer(Unpooled.buffer()).writeBlockPos(this.getPos()));
+			return new BinderGUIGui.GuiContainerMod(id, player, new PacketBuffer(Unpooled.buffer()).writeBlockPos(this.getPos()));
 		}
 
 		@Override
 		public ITextComponent getDisplayName() {
-			return new StringTextComponent("AE Infuser");
+			return new StringTextComponent("AE Binder");
 		}
 
 		@Override
@@ -254,6 +273,8 @@ public class AEInfuserBlock extends AlchemicalExcellenceModElements.ModElement {
 
 		@Override
 		public boolean isItemValidForSlot(int index, ItemStack stack) {
+			if (index == 2)
+				return false;
 			return true;
 		}
 
@@ -269,6 +290,10 @@ public class AEInfuserBlock extends AlchemicalExcellenceModElements.ModElement {
 
 		@Override
 		public boolean canExtractItem(int index, ItemStack stack, Direction direction) {
+			if (index == 0)
+				return false;
+			if (index == 1)
+				return false;
 			return true;
 		}
 		private final LazyOptional<? extends IItemHandler>[] handlers = SidedInvWrapper.create(this, Direction.values());

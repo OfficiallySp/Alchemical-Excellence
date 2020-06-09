@@ -1,9 +1,12 @@
 {
   "block.alchemical_excellence.ae_ore": "Alchemical Fragment Ore",
   "block.alchemical_excellence.ae_infuser": "AE Infuser",
+  "item.alchemical_excellence.ae_coal_x": "Alchemical Coal",
   "item.alchemical_excellence.ae_paxel": "AE Paxel",
   "itemGroup.tabae_creativetab": "Alchemical Excellence",
   "item.alchemical_excellence.ae_shard": "Alchemical Shard",
+  "block.alchemical_excellence.ae_binder": "AE Binder",
+  "item.alchemical_excellence.ae_coal": "Lesser Alchemical Coal",
   "item.alchemical_excellence.ae_fragment": "AE Fragment",
   "block.alchemical_excellence.ae_block": "AE Block"
 }

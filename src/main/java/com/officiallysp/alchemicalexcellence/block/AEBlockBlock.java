@@ -26,7 +26,7 @@ public class AEBlockBlock extends AlchemicalExcellenceModElements.ModElement {
 	@ObjectHolder("alchemical_excellence:ae_block")
 	public static final Block block = null;
 	public AEBlockBlock(AlchemicalExcellenceModElements instance) {
-		super(instance, 9);
+		super(instance, 5);
 	}
 
 	@Override

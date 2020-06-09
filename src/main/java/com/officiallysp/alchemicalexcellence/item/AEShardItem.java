@@ -17,7 +17,7 @@ public class AEShardItem extends AlchemicalExcellenceModElements.ModElement {
 	@ObjectHolder("alchemical_excellence:ae_shard")
 	public static final Item block = null;
 	public AEShardItem(AlchemicalExcellenceModElements instance) {
-		super(instance, 2);
+		super(instance, 1);
 	}
 
 	@Override

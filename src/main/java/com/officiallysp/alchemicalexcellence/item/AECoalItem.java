@@ -3,25 +3,19 @@ package com.officiallysp.alchemicalexcellence.item;
 
 import net.minecraftforge.registries.ObjectHolder;
 
-import net.minecraft.world.World;
-import net.minecraft.util.text.StringTextComponent;
-import net.minecraft.util.text.ITextComponent;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
-import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.block.BlockState;
-
-import java.util.List;
 
 import com.officiallysp.alchemicalexcellence.itemgroup.AECreativetabItemGroup;
 import com.officiallysp.alchemicalexcellence.AlchemicalExcellenceModElements;
 
 @AlchemicalExcellenceModElements.ModElement.Tag
-public class AEFragmentItem extends AlchemicalExcellenceModElements.ModElement {
-	@ObjectHolder("alchemical_excellence:ae_fragment")
+public class AECoalItem extends AlchemicalExcellenceModElements.ModElement {
+	@ObjectHolder("alchemical_excellence:ae_coal")
 	public static final Item block = null;
-	public AEFragmentItem(AlchemicalExcellenceModElements instance) {
-		super(instance, 2);
+	public AECoalItem(AlchemicalExcellenceModElements instance) {
+		super(instance, 13);
 	}
 
 	@Override
@@ -31,7 +25,7 @@ public class AEFragmentItem extends AlchemicalExcellenceModElements.ModElement {
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
 			super(new Item.Properties().group(AECreativetabItemGroup.tab).maxStackSize(64));
-			setRegistryName("ae_fragment");
+			setRegistryName("ae_coal");
 		}
 
 		@Override
@@ -47,13 +41,6 @@ public class AEFragmentItem extends AlchemicalExcellenceModElements.ModElement {
 		@Override
 		public float getDestroySpeed(ItemStack par1ItemStack, BlockState par2Block) {
 			return 1F;
-		}
-
-		@Override
-		public void addInformation(ItemStack itemstack, World world, List<ITextComponent> list, ITooltipFlag flag) {
-			super.addInformation(itemstack, world, list, flag);
-			list.add(new StringTextComponent("Combine in an Infuser"));
-			list.add(new StringTextComponent("To make Alchemical Shards"));
 		}
 	}
 }

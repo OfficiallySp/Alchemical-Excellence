@@ -13,7 +13,7 @@ import com.officiallysp.alchemicalexcellence.AlchemicalExcellenceModElements;
 @AlchemicalExcellenceModElements.ModElement.Tag
 public class AECreativetabItemGroup extends AlchemicalExcellenceModElements.ModElement {
 	public AECreativetabItemGroup(AlchemicalExcellenceModElements instance) {
-		super(instance, 3);
+		super(instance, 7);
 	}
 
 	@Override

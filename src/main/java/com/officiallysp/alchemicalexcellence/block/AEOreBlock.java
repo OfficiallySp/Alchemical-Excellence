@@ -39,7 +39,7 @@ public class AEOreBlock extends AlchemicalExcellenceModElements.ModElement {
 	@ObjectHolder("alchemical_excellence:ae_ore")
 	public static final Block block = null;
 	public AEOreBlock(AlchemicalExcellenceModElements instance) {
-		super(instance, 5);
+		super(instance, 4);
 	}
 
 	@Override

@@ -18,7 +18,7 @@ import com.officiallysp.alchemicalexcellence.AlchemicalExcellenceModElements;
 @AlchemicalExcellenceModElements.ModElement.Tag
 public class InfuserDataProcedure extends AlchemicalExcellenceModElements.ModElement {
 	public InfuserDataProcedure(AlchemicalExcellenceModElements instance) {
-		super(instance, 8);
+		super(instance, 9);
 	}
 
 	public static void executeProcedure(java.util.HashMap<String, Object> dependencies) {
