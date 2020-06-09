@@ -7,18 +7,18 @@
     "customModelName": "Normal",
     "name": "AE Paxel",
     "specialInfo": [
-      "The all in one multitool"
+      "DEV USE ONLY"
     ],
     "creativeTab": {
       "value": "TOOLS"
     },
     "toolType": "MultiTool",
     "harvestLevel": 4,
-    "efficiency": 15.0,
+    "efficiency": 30.0,
     "attackSpeed": 2.0,
-    "enchantability": 2,
-    "damageVsEntity": 1.0,
-    "usageCount": 100,
+    "enchantability": 30,
+    "damageVsEntity": 1.5,
+    "usageCount": 2501,
     "blocksAffected": [],
     "hasGlow": false,
     "repairItems": []

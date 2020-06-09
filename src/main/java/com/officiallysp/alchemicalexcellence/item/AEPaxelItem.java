@@ -37,13 +37,13 @@ public class AEPaxelItem extends AlchemicalExcellenceModElements.ModElement {
 			@Override
 			public void addInformation(ItemStack itemstack, World world, List<ITextComponent> list, ITooltipFlag flag) {
 				super.addInformation(itemstack, world, list, flag);
-				list.add(new StringTextComponent("The all in one multitool"));
+				list.add(new StringTextComponent("DEV USE ONLY"));
 			}
 		}.setRegistryName("ae_paxel"));
 	}
 	private static class ItemToolCustom extends Item {
 		protected ItemToolCustom() {
-			super(new Item.Properties().group(ItemGroup.TOOLS).maxDamage(100));
+			super(new Item.Properties().group(ItemGroup.TOOLS).maxDamage(2501));
 		}
 
 		@Override
@@ -51,7 +51,7 @@ public class AEPaxelItem extends AlchemicalExcellenceModElements.ModElement {
 			Multimap<String, AttributeModifier> multimap = super.getAttributeModifiers(equipmentSlot);
 			if (equipmentSlot == EquipmentSlotType.MAINHAND) {
 				multimap.put(SharedMonsterAttributes.ATTACK_DAMAGE.getName(),
-						new AttributeModifier(ATTACK_DAMAGE_MODIFIER, "Tool modifier", -1f, AttributeModifier.Operation.ADDITION));
+						new AttributeModifier(ATTACK_DAMAGE_MODIFIER, "Tool modifier", -0.5f, AttributeModifier.Operation.ADDITION));
 				multimap.put(SharedMonsterAttributes.ATTACK_SPEED.getName(),
 						new AttributeModifier(ATTACK_SPEED_MODIFIER, "Tool modifier", -2, AttributeModifier.Operation.ADDITION));
 			}
@@ -65,7 +65,7 @@ public class AEPaxelItem extends AlchemicalExcellenceModElements.ModElement {
 
 		@Override
 		public float getDestroySpeed(ItemStack itemstack, BlockState blockstate) {
-			return 15f;
+			return 30f;
 		}
 
 		@Override
@@ -82,7 +82,7 @@ public class AEPaxelItem extends AlchemicalExcellenceModElements.ModElement {
 
 		@Override
 		public int getItemEnchantability() {
-			return 2;
+			return 30;
 		}
 	}
 }
