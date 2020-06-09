@@ -98,6 +98,15 @@
           }
         ]
       }
+    },
+    {
+      "name": "AEBlock",
+      "type": "block",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ae_block"
     }
   ],
   "variable_elements": [],
@@ -107,11 +116,12 @@
       "item.alchemical_excellence.alchemical_infused_armor_armorbody": "AlchemicalInfusedArmor Chestplate",
       "item.alchemical_excellence.alchemical_infused_armor_armorlegs": "AlchemicalInfusedArmor Leggings",
       "block.alchemical_excellence.ae_ore": "Alchemical Fragment Ore",
-      "block.alchemical_excellence.ae_infuser": "AE Infuser",
       "item.alchemical_excellence.alchemical_infused_armor_armorhelmet": "AlchemicalInfusedArmor Helmet",
-      "item.alchemical_excellence.ae_shard": "Alchemical Shard",
       "itemGroup.tabae_creativetab": "Alchemical Excellence",
       "item.alchemical_excellence.ae_fragment": "AE Fragment",
+      "block.alchemical_excellence.ae_block": "AE Block",
+      "block.alchemical_excellence.ae_infuser": "AE Infuser",
+      "item.alchemical_excellence.ae_shard": "Alchemical Shard",
       "item.alchemical_excellence.alchemical_infused_armor_armorboots": "AlchemicalInfusedArmor Boots"
     }
   },

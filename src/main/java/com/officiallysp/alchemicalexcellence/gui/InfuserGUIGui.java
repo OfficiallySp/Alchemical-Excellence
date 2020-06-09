@@ -468,7 +468,7 @@ public class InfuserGUIGui extends AlchemicalExcellenceModElements.ModElement {
 
 		@Override
 		protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) {
-			this.font.drawString("Infuser", 6, 6, -16777216);
+			this.font.drawString("Binder", 6, 6, -16777216);
 		}
 
 		@Override
