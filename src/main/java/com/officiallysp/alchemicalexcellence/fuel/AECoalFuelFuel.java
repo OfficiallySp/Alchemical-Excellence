@@ -20,6 +20,6 @@ public class AECoalFuelFuel extends AlchemicalExcellenceModElements.ModElement {
 	@SubscribeEvent
 	public void furnaceFuelBurnTimeEvent(FurnaceFuelBurnTimeEvent event) {
 		if (event.getItemStack().getItem() == new ItemStack(AECoalItem.block, (int) (1)).getItem())
-			event.setBurnTime(1600);
+			event.setBurnTime(30000);
 	}
 }

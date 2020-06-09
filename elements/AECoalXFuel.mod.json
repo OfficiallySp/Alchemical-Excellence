@@ -2,7 +2,7 @@
   "_fv": 8,
   "_type": "fuel",
   "definition": {
-    "power": 1600,
+    "power": 50000,
     "block": {
       "value": "CUSTOM:AECoalX"
     }
