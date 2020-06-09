@@ -62,13 +62,13 @@
     "luminance": 0.0,
     "unbreakable": false,
     "breakHarvestLevel": 1,
-    "spawnParticles": false,
+    "spawnParticles": true,
     "particleToSpawn": {
-      "value": "EXPLOSION_NORMAL"
+      "value": "CRIT_MAGIC"
     },
-    "particleSpawningShape": "Spread",
+    "particleSpawningShape": "Top",
     "particleSpawningRadious": 0.5,
-    "particleAmount": 4,
+    "particleAmount": 1,
     "particleSpawningCondition": "ALWAYS",
     "hasInventory": true,
     "guiBoundTo": "InfuserGUI",

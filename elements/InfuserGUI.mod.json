@@ -63,10 +63,10 @@
       {
         "type": "button",
         "data": {
-          "text": "Bind",
+          "text": "Infuse",
           "width": 90,
           "height": 40,
-          "name": "Bind",
+          "name": "Infuse",
           "x": 408,
           "y": 186
         }
