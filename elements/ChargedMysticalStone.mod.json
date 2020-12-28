@@ -3,24 +3,29 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "aeshard",
+    "texture": "mysticalstone",
     "customModelName": "Normal",
-    "name": "Alchemical Shard",
-    "rarity": "COMMON",
+    "name": "Charged Mystical Stone",
+    "rarity": "EPIC",
     "creativeTab": {
       "value": "CUSTOM:AECreativetab"
     },
-    "stackSize": 64,
+    "stackSize": 1,
     "enchantability": 0,
     "useDuration": 0,
-    "toolType": 1.0,
+    "toolType": 0.0,
     "damageCount": 0,
+    "recipeRemainder": {
+      "value": "CUSTOM:MysticalStone"
+    },
     "destroyAnyBlock": false,
-    "stayInGridWhenCrafting": false,
-    "damageOnCrafting": false,
+    "stayInGridWhenCrafting": true,
+    "damageOnCrafting": true,
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
-    "specialInfo": [],
+    "specialInfo": [
+      "Charged"
+    ],
     "hasGlow": true,
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,

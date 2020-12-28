@@ -18,7 +18,9 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.block.BlockState;
 
+import java.util.Map;
 import java.util.List;
+import java.util.HashMap;
 
 import com.officiallysp.alchemicalexcellence.procedures.AEPaxelBlockDestroyedWithToolProcedure;
 import com.officiallysp.alchemicalexcellence.itemgroup.AECreativetabItemGroup;
@@ -40,7 +42,7 @@ public class AEPaxelItem extends AlchemicalExcellenceModElements.ModElement {
 			@Override
 			public void addInformation(ItemStack itemstack, World world, List<ITextComponent> list, ITooltipFlag flag) {
 				super.addInformation(itemstack, world, list, flag);
-				list.add(new StringTextComponent("DEV USE ONLY"));
+				list.add(new StringTextComponent("Charged (Increased Proc Rate)"));
 			}
 
 			@Override
@@ -50,12 +52,12 @@ public class AEPaxelItem extends AlchemicalExcellenceModElements.ModElement {
 				int y = pos.getY();
 				int z = pos.getZ();
 				{
-					java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
+					Map<String, Object> $_dependencies = new HashMap<>();
 					$_dependencies.put("entity", entity);
+					$_dependencies.put("itemstack", itemstack);
 					$_dependencies.put("x", x);
 					$_dependencies.put("y", y);
 					$_dependencies.put("z", z);
-					$_dependencies.put("itemstack", itemstack);
 					$_dependencies.put("world", world);
 					AEPaxelBlockDestroyedWithToolProcedure.executeProcedure($_dependencies);
 				}
@@ -71,7 +73,7 @@ public class AEPaxelItem extends AlchemicalExcellenceModElements.ModElement {
 	}
 	private static class ItemToolCustom extends Item {
 		protected ItemToolCustom() {
-			super(new Item.Properties().group(AECreativetabItemGroup.tab).maxDamage(2501));
+			super(new Item.Properties().group(AECreativetabItemGroup.tab).maxDamage(2500));
 		}
 
 		@Override
@@ -93,7 +95,7 @@ public class AEPaxelItem extends AlchemicalExcellenceModElements.ModElement {
 
 		@Override
 		public float getDestroySpeed(ItemStack itemstack, BlockState blockstate) {
-			return 15.5f;
+			return 20f;
 		}
 
 		@Override

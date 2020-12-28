@@ -68,47 +68,10 @@
       "name": "AEPaxel",
       "type": "tool",
       "sortid": 6,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "ids": {},
       "registry_name": "ae_paxel"
-    },
-    {
-      "name": "AEPaxelBlockDestroyedWithTool",
-      "type": "procedure",
-      "sortid": 10,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "ae_paxel_block_destroyed_with_tool",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "int"
-          },
-          {
-            "name": "y",
-            "type": "int"
-          },
-          {
-            "name": "z",
-            "type": "int"
-          },
-          {
-            "name": "itemstack",
-            "type": "itemstack"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
     },
     {
       "name": "AECoal",
@@ -163,20 +126,40 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "binder_gui"
+    },
+    {
+      "name": "ChargedMysticalStone",
+      "type": "item",
+      "sortid": 20,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "charged_mystical_stone"
+    },
+    {
+      "name": "MysticalStone",
+      "type": "item",
+      "sortid": 21,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "mystical_stone"
     }
   ],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
     "en_us": {
+      "item.alchemical_excellence.charged_mystical_stone": "Charged Mystical Stone",
       "block.alchemical_excellence.ae_ore": "Alchemical Fragment Ore",
-      "itemGroup.tabae_creativetab": "Alchemical Excellence",
       "item.alchemical_excellence.ae_coal": "Lesser Alchemical Coal",
+      "itemGroup.tabae_creativetab": "Alchemical Excellence",
       "item.alchemical_excellence.ae_fragment": "AE Fragment",
       "block.alchemical_excellence.ae_block": "AE Block",
+      "item.alchemical_excellence.mystical_stone": "Charged Mystical Stone",
       "item.alchemical_excellence.ae_coal_x": "Alchemical Coal",
       "block.alchemical_excellence.ae_infuser": "Infuser",
-      "item.alchemical_excellence.ae_paxel": "AE Paxel",
+      "item.alchemical_excellence.ae_paxel": "Charged Paxel",
       "item.alchemical_excellence.ae_shard": "Alchemical Shard",
       "block.alchemical_excellence.ae_binder": "AE Binder"
     }
@@ -189,6 +172,7 @@
     "websiteURL": "https://mcreator.net",
     "disableForgeVersionCheck": true,
     "serverSideOnly": false,
+    "modPicture": "binder_gui",
     "requiredMods": [],
     "dependencies": [],
     "dependants": [],
@@ -198,5 +182,5 @@
     "modElementsPackage": "com.officiallysp.alchemicalexcellence",
     "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202000322116
+  "mcreatorVersion": 202000547520
 }

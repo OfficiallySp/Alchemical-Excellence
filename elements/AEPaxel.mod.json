@@ -1,27 +1,33 @@
 {
-  "_fv": 8,
+  "_fv": 13,
   "_type": "tool",
   "definition": {
     "renderType": 0,
     "texture": "paxelaio",
     "customModelName": "Normal",
-    "name": "AE Paxel",
+    "name": "Charged Paxel",
     "specialInfo": [
-      "DEV USE ONLY"
+      "Charged (Increased Proc Rate)"
     ],
     "creativeTab": {
       "value": "CUSTOM:AECreativetab"
     },
     "toolType": "MultiTool",
     "harvestLevel": 4,
-    "efficiency": 15.5,
+    "efficiency": 20.0,
     "attackSpeed": 5.0,
     "enchantability": 30,
     "damageVsEntity": 1.0,
-    "usageCount": 2501,
+    "usageCount": 2500,
     "blocksAffected": [],
     "hasGlow": true,
-    "repairItems": [],
+    "repairItems": [
+      {
+        "value": "CUSTOM:AEShard"
+      }
+    ],
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
     "onBlockDestroyedWithTool": {
       "name": "AEPaxelBlockDestroyedWithTool"
     }

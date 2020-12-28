@@ -1,12 +1,14 @@
 {
+  "item.alchemical_excellence.charged_mystical_stone": "Charged Mystical Stone",
   "block.alchemical_excellence.ae_ore": "Alchemical Fragment Ore",
-  "itemGroup.tabae_creativetab": "Alchemical Excellence",
   "item.alchemical_excellence.ae_coal": "Lesser Alchemical Coal",
+  "itemGroup.tabae_creativetab": "Alchemical Excellence",
   "item.alchemical_excellence.ae_fragment": "AE Fragment",
   "block.alchemical_excellence.ae_block": "AE Block",
+  "item.alchemical_excellence.mystical_stone": "Charged Mystical Stone",
   "item.alchemical_excellence.ae_coal_x": "Alchemical Coal",
   "block.alchemical_excellence.ae_infuser": "Infuser",
-  "item.alchemical_excellence.ae_paxel": "AE Paxel",
+  "item.alchemical_excellence.ae_paxel": "Charged Paxel",
   "item.alchemical_excellence.ae_shard": "Alchemical Shard",
   "block.alchemical_excellence.ae_binder": "AE Binder"
 }

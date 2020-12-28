@@ -29,6 +29,7 @@ import net.minecraft.inventory.container.Container;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.Entity;
 import net.minecraft.client.gui.widget.button.Button;
 import net.minecraft.client.gui.screen.inventory.ContainerScreen;
 import net.minecraft.client.gui.ScreenManager;
@@ -101,6 +102,14 @@ public class InfuserGUIGui extends AlchemicalExcellenceModElements.ModElement {
 						this.internal = capability;
 						this.bound = true;
 					});
+				} else if (extraData.readableBytes() > 1) {
+					extraData.readByte(); // drop padding
+					Entity entity = world.getEntityByID(extraData.readVarInt());
+					if (entity != null)
+						entity.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+							this.internal = capability;
+							this.bound = true;
+						});
 				} else { // might be bound to block
 					TileEntity ent = inv.player != null ? inv.player.world.getTileEntity(pos) : null;
 					if (ent != null) {
@@ -307,11 +316,20 @@ public class InfuserGUIGui extends AlchemicalExcellenceModElements.ModElement {
 
 		@Override
 		protected void drawGuiContainerBackgroundLayer(float par1, int par2, int par3) {
-			GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
+			GL11.glColor4f(1, 1, 1, 1);
 			Minecraft.getInstance().getTextureManager().bindTexture(texture);
 			int k = (this.width - this.xSize) / 2;
 			int l = (this.height - this.ySize) / 2;
-			this.blit(k, l, 0, 0, this.xSize, this.ySize);
+			this.blit(k, l, 0, 0, this.xSize, this.ySize, this.xSize, this.ySize);
+		}
+
+		@Override
+		public boolean keyPressed(int key, int b, int c) {
+			if (key == 256) {
+				this.minecraft.player.closeScreen();
+				return true;
+			}
+			return super.keyPressed(key, b, c);
 		}
 
 		@Override
@@ -321,7 +339,7 @@ public class InfuserGUIGui extends AlchemicalExcellenceModElements.ModElement {
 
 		@Override
 		protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) {
-			this.font.drawString("Infuser", 16, 29, -16777216);
+			this.font.drawString("Infuser", 15, 29, -16777216);
 		}
 
 		@Override
@@ -334,7 +352,7 @@ public class InfuserGUIGui extends AlchemicalExcellenceModElements.ModElement {
 		public void init(Minecraft minecraft, int width, int height) {
 			super.init(minecraft, width, height);
 			minecraft.keyboardListener.enableRepeatEvents(true);
-			this.addButton(new Button(this.guiLeft + 79, this.guiTop + 56, 45, 20, "Infuse", e -> {
+			this.addButton(new Button(this.guiLeft + 78, this.guiTop + 56, 45, 20, "Infuse", e -> {
 				AlchemicalExcellenceMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(0, x, y, z));
 				handleButtonAction(entity, 0, x, y, z);
 			}));

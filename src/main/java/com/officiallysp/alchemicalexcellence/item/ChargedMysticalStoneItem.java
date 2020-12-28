@@ -2,6 +2,8 @@
 package com.officiallysp.alchemicalexcellence.item;
 
 import net.minecraftforge.registries.ObjectHolder;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.World;
 import net.minecraft.util.text.StringTextComponent;
@@ -18,11 +20,11 @@ import com.officiallysp.alchemicalexcellence.itemgroup.AECreativetabItemGroup;
 import com.officiallysp.alchemicalexcellence.AlchemicalExcellenceModElements;
 
 @AlchemicalExcellenceModElements.ModElement.Tag
-public class AEFragmentItem extends AlchemicalExcellenceModElements.ModElement {
-	@ObjectHolder("alchemical_excellence:ae_fragment")
+public class ChargedMysticalStoneItem extends AlchemicalExcellenceModElements.ModElement {
+	@ObjectHolder("alchemical_excellence:charged_mystical_stone")
 	public static final Item block = null;
-	public AEFragmentItem(AlchemicalExcellenceModElements instance) {
-		super(instance, 2);
+	public ChargedMysticalStoneItem(AlchemicalExcellenceModElements instance) {
+		super(instance, 20);
 	}
 
 	@Override
@@ -31,8 +33,18 @@ public class AEFragmentItem extends AlchemicalExcellenceModElements.ModElement {
 	}
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
-			super(new Item.Properties().group(AECreativetabItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON));
-			setRegistryName("ae_fragment");
+			super(new Item.Properties().group(AECreativetabItemGroup.tab).maxStackSize(1).rarity(Rarity.EPIC));
+			setRegistryName("charged_mystical_stone");
+		}
+
+		@Override
+		public boolean hasContainerItem() {
+			return true;
+		}
+
+		@Override
+		public ItemStack getContainerItem(ItemStack itemstack) {
+			return new ItemStack(MysticalStoneItem.block, (int) (1));
 		}
 
 		@Override
@@ -47,14 +59,19 @@ public class AEFragmentItem extends AlchemicalExcellenceModElements.ModElement {
 
 		@Override
 		public float getDestroySpeed(ItemStack par1ItemStack, BlockState par2Block) {
-			return 1F;
+			return 0F;
+		}
+
+		@Override
+		@OnlyIn(Dist.CLIENT)
+		public boolean hasEffect(ItemStack itemstack) {
+			return true;
 		}
 
 		@Override
 		public void addInformation(ItemStack itemstack, World world, List<ITextComponent> list, ITooltipFlag flag) {
 			super.addInformation(itemstack, world, list, flag);
-			list.add(new StringTextComponent("Combine in a Binder"));
-			list.add(new StringTextComponent("To make Alchemical Shards"));
+			list.add(new StringTextComponent("Charged"));
 		}
 	}
 }

@@ -126,14 +126,11 @@ public class AEInfuserBlock extends AlchemicalExcellenceModElements.ModElement {
 			int x = pos.getX();
 			int y = pos.getY();
 			int z = pos.getZ();
-			int i = x;
-			int j = y;
-			int k = z;
 			if (true)
 				for (int l = 0; l < 1; ++l) {
-					double d0 = (double) ((float) i + 0.5) + (double) (random.nextFloat() - 0.5) * 0.5D;
-					double d1 = ((double) ((float) j + 0.7) + (double) (random.nextFloat() - 0.5) * 0.5D) + 0.5;
-					double d2 = (double) ((float) k + 0.5) + (double) (random.nextFloat() - 0.5) * 0.5D;
+					double d0 = (double) ((float) x + 0.5) + (double) (random.nextFloat() - 0.5) * 0.5D;
+					double d1 = ((double) ((float) y + 0.7) + (double) (random.nextFloat() - 0.5) * 0.5D) + 0.5;
+					double d2 = (double) ((float) z + 0.5) + (double) (random.nextFloat() - 0.5) * 0.5D;
 					world.addParticle(ParticleTypes.ENCHANTED_HIT, d0, d1, d2, 0, 0, 0);
 				}
 		}

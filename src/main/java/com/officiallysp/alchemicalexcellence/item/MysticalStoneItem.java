@@ -18,11 +18,11 @@ import com.officiallysp.alchemicalexcellence.itemgroup.AECreativetabItemGroup;
 import com.officiallysp.alchemicalexcellence.AlchemicalExcellenceModElements;
 
 @AlchemicalExcellenceModElements.ModElement.Tag
-public class AEFragmentItem extends AlchemicalExcellenceModElements.ModElement {
-	@ObjectHolder("alchemical_excellence:ae_fragment")
+public class MysticalStoneItem extends AlchemicalExcellenceModElements.ModElement {
+	@ObjectHolder("alchemical_excellence:mystical_stone")
 	public static final Item block = null;
-	public AEFragmentItem(AlchemicalExcellenceModElements instance) {
-		super(instance, 2);
+	public MysticalStoneItem(AlchemicalExcellenceModElements instance) {
+		super(instance, 21);
 	}
 
 	@Override
@@ -31,8 +31,18 @@ public class AEFragmentItem extends AlchemicalExcellenceModElements.ModElement {
 	}
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
-			super(new Item.Properties().group(AECreativetabItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON));
-			setRegistryName("ae_fragment");
+			super(new Item.Properties().group(AECreativetabItemGroup.tab).maxStackSize(1).rarity(Rarity.COMMON));
+			setRegistryName("mystical_stone");
+		}
+
+		@Override
+		public boolean hasContainerItem() {
+			return true;
+		}
+
+		@Override
+		public ItemStack getContainerItem(ItemStack itemstack) {
+			return new ItemStack(this);
 		}
 
 		@Override
@@ -47,14 +57,13 @@ public class AEFragmentItem extends AlchemicalExcellenceModElements.ModElement {
 
 		@Override
 		public float getDestroySpeed(ItemStack par1ItemStack, BlockState par2Block) {
-			return 1F;
+			return 0F;
 		}
 
 		@Override
 		public void addInformation(ItemStack itemstack, World world, List<ITextComponent> list, ITooltipFlag flag) {
 			super.addInformation(itemstack, world, list, flag);
-			list.add(new StringTextComponent("Combine in a Binder"));
-			list.add(new StringTextComponent("To make Alchemical Shards"));
+			list.add(new StringTextComponent("Discharged"));
 		}
 	}
 }

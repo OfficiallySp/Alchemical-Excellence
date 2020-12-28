@@ -7,6 +7,7 @@ version="1.0.0"
 displayName="Alchemical Excellence"
 credits="Created using mod maker MCreator - https://mcreator.net/about"
 displayURL="https://mcreator.net"
+logoFile="logo.png"
 authors="OfficiallySp777"
 
 [[dependencies.alchemical_excellence]]
@@ -15,6 +16,7 @@ authors="OfficiallySp777"
     versionRange="[1.15.2]"
     ordering="NONE"
     side="BOTH"
+
 
 
 

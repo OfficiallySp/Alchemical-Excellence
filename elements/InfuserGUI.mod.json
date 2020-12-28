@@ -1,11 +1,14 @@
 {
-  "_fv": 8,
+  "_fv": 13,
   "_type": "gui",
   "definition": {
     "type": 1,
-    "width": 352,
-    "height": 332,
+    "width": 176,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
     "renderBgLayer": true,
+    "doesPauseGame": false,
     "components": [
       {
         "type": "label",
@@ -16,8 +19,8 @@
             "falpha": 0.0
           },
           "name": "Infuser",
-          "x": 282,
-          "y": 132
+          "x": 141,
+          "y": 66
         }
       },
       {
@@ -32,9 +35,10 @@
           },
           "id": 0,
           "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
           "name": "Slot #0",
-          "x": 300,
-          "y": 168
+          "x": 150,
+          "y": 84
         }
       },
       {
@@ -45,9 +49,10 @@
           },
           "id": 1,
           "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
           "name": "Slot #1",
-          "x": 354,
-          "y": 186
+          "x": 177,
+          "y": 93
         }
       },
       {
@@ -55,20 +60,21 @@
         "data": {
           "id": 2,
           "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
           "name": "Slot #2",
-          "x": 516,
-          "y": 186
+          "x": 258,
+          "y": 93
         }
       },
       {
         "type": "button",
         "data": {
           "text": "Infuse",
-          "width": 90,
-          "height": 40,
+          "width": 45,
+          "height": 20,
           "name": "Infuse",
-          "x": 408,
-          "y": 186
+          "x": 204,
+          "y": 93
         }
       }
     ]
