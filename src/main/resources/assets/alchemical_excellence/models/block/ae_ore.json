@@ -1,7 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "alchemical_excellence:blocks/aeore",
-    "particle": "alchemical_excellence:blocks/aeore"
-  }
-}

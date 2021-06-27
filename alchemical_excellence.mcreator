@@ -1,168 +1,14 @@
 {
   "id_map": {},
-  "mod_elements": [
-    {
-      "name": "AEShard",
-      "type": "item",
-      "sortid": 1,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "ae_shard"
-    },
-    {
-      "name": "AECreativetab",
-      "type": "tab",
-      "sortid": 7,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "ae_creativetab"
-    },
-    {
-      "name": "AEFragment",
-      "type": "item",
-      "sortid": 2,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "ae_fragment"
-    },
-    {
-      "name": "AEOre",
-      "type": "block",
-      "sortid": 4,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "ae_ore"
-    },
-    {
-      "name": "AEInfuser",
-      "type": "block",
-      "sortid": 3,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "ae_infuser"
-    },
-    {
-      "name": "InfuserGUI",
-      "type": "gui",
-      "sortid": 8,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "infuser_gui"
-    },
-    {
-      "name": "AEBlock",
-      "type": "block",
-      "sortid": 5,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "ae_block"
-    },
-    {
-      "name": "AEPaxel",
-      "type": "tool",
-      "sortid": 6,
-      "compiles": false,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "ae_paxel"
-    },
-    {
-      "name": "AECoal",
-      "type": "item",
-      "sortid": 13,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "ae_coal"
-    },
-    {
-      "name": "AECoalX",
-      "type": "item",
-      "sortid": 14,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "ae_coal_x"
-    },
-    {
-      "name": "AECoalFuel",
-      "type": "fuel",
-      "sortid": 15,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "ae_coal_fuel"
-    },
-    {
-      "name": "AECoalXFuel",
-      "type": "fuel",
-      "sortid": 16,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "ae_coal_x_fuel"
-    },
-    {
-      "name": "AEBinder",
-      "type": "block",
-      "sortid": 18,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "ae_binder"
-    },
-    {
-      "name": "BinderGUI",
-      "type": "gui",
-      "sortid": 19,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "binder_gui"
-    },
-    {
-      "name": "ChargedMysticalStone",
-      "type": "item",
-      "sortid": 20,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "charged_mystical_stone"
-    },
-    {
-      "name": "MysticalStone",
-      "type": "item",
-      "sortid": 21,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "mystical_stone"
-    }
-  ],
+  "mod_elements": [],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
-    "en_us": {
-      "item.alchemical_excellence.charged_mystical_stone": "Charged Mystical Stone",
-      "block.alchemical_excellence.ae_ore": "Alchemical Fragment Ore",
-      "item.alchemical_excellence.ae_coal": "Lesser Alchemical Coal",
-      "itemGroup.tabae_creativetab": "Alchemical Excellence",
-      "item.alchemical_excellence.ae_fragment": "AE Fragment",
-      "block.alchemical_excellence.ae_block": "AE Block",
-      "item.alchemical_excellence.mystical_stone": "Charged Mystical Stone",
-      "item.alchemical_excellence.ae_coal_x": "Alchemical Coal",
-      "block.alchemical_excellence.ae_infuser": "Infuser",
-      "item.alchemical_excellence.ae_paxel": "Charged Paxel",
-      "item.alchemical_excellence.ae_shard": "Alchemical Shard",
-      "block.alchemical_excellence.ae_binder": "AE Binder"
-    }
+    "en_us": {}
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": []
   },
   "workspaceSettings": {
     "modid": "alchemical_excellence",
@@ -170,6 +16,7 @@
     "version": "1.0.0",
     "author": "OfficiallySp777",
     "websiteURL": "https://mcreator.net",
+    "license": "Not specified",
     "disableForgeVersionCheck": true,
     "serverSideOnly": false,
     "modPicture": "binder_gui",
@@ -177,10 +24,10 @@
     "dependencies": [],
     "dependants": [],
     "mcreatorDependencies": [],
-    "currentGenerator": "forge-1.15.2",
+    "currentGenerator": "forge-1.16.5",
     "credits": "Created using mod maker MCreator - https://mcreator.net/about",
     "modElementsPackage": "com.officiallysp.alchemicalexcellence",
     "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202000547520
+  "mcreatorVersion": 202100118117
 }
