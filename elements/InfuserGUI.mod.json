@@ -1,0 +1,85 @@
+{
+  "_fv": 18,
+  "_type": "gui",
+  "definition": {
+    "type": 1,
+    "width": 176,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "text": "Infuser",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Infuser",
+          "x": 195,
+          "y": 71
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "color": {
+            "value": -13057,
+            "falpha": 0.0
+          },
+          "id": 0,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #0",
+          "x": 150,
+          "y": 80
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 1,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #1",
+          "x": 168,
+          "y": 89
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 2,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #2",
+          "x": 240,
+          "y": 89
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Infuse",
+          "onClick": {
+            "name": "AEInfuserInfuse"
+          },
+          "width": 36,
+          "height": 20,
+          "name": "Infuse",
+          "x": 195,
+          "y": 89
+        }
+      }
+    ]
+  }
+}

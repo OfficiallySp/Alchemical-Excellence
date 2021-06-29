@@ -1,0 +1,35 @@
+{
+  "_fv": 18,
+  "_type": "item",
+  "definition": {
+    "renderType": 0,
+    "texture": "mysticalstone",
+    "customModelName": "Normal",
+    "name": "Mystical Stone",
+    "rarity": "UNCOMMON",
+    "creativeTab": {
+      "value": "CUSTOM:AEMod"
+    },
+    "stackSize": 1,
+    "enchantability": 0,
+    "useDuration": 0,
+    "toolType": 1.0,
+    "damageCount": 0,
+    "recipeRemainder": {
+      "value": "CUSTOM:MysticalStone"
+    },
+    "destroyAnyBlock": false,
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": true,
+    "damageOnCrafting": false,
+    "enableMeleeDamage": false,
+    "damageVsEntity": 0.0,
+    "specialInfo": [
+      "Charged"
+    ],
+    "hasGlow": true,
+    "guiBoundTo": "<NONE>",
+    "inventorySize": 9,
+    "inventoryStackSize": 64
+  }
+}

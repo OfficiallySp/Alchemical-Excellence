@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "alchemical_excellence:blocks/aeore",
+    "up": "alchemical_excellence:blocks/aeore",
+    "north": "alchemical_excellence:blocks/aeore",
+    "east": "alchemical_excellence:blocks/aeore",
+    "south": "alchemical_excellence:blocks/aeore",
+    "west": "alchemical_excellence:blocks/aeore",
+    "particle": "alchemical_excellence:blocks/aeore"
+  }
+}

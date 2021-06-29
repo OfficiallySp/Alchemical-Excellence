@@ -1,15 +1,17 @@
 modLoader="javafml"
 loaderVersion="[36,)"
-license="Not specified"
+license="All Rights Reserved"
 
 [[mods]]
 modId="alchemical_excellence"
 version="1.0.0"
 displayName="Alchemical Excellence"
-credits="Created using mod maker MCreator - https://mcreator.net/about"
-displayURL="https://mcreator.net"
-logoFile="logo.png"
-authors="OfficiallySp777"
+credits="Created by Shane Pepperell (Sp777/OfficiallySp)"
+displayURL="https://officiallysp.sytes.net"
+authors="OfficiallySp"
+description='''
+description goes here whenever i can be bothered or not forget
+'''
 
 [[dependencies.alchemical_excellence]]
     modId="minecraft"

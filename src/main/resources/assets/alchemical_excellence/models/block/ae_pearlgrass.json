@@ -1,0 +1,10 @@
+{
+  "parent": "block/grass_block",
+  "textures": {
+    "bottom": "alchemical_excellence:blocks/pearldirt",
+    "top": "alchemical_excellence:blocks/pearlgrasstop",
+    "side": "alchemical_excellence:blocks/pearlgrassside",
+    "overlay": "alchemical_excellence:blocks/pearlgrassside",
+    "particle": "alchemical_excellence:blocks/pearldirt"
+  }
+}

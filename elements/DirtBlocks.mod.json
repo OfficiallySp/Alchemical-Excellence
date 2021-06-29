@@ -1,0 +1,20 @@
+{
+  "_fv": 18,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:AEPearlGrass"
+      },
+      {
+        "value": "CUSTOM:AEPearldirt"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "name": "dirt",
+    "namespace": "forge"
+  }
+}

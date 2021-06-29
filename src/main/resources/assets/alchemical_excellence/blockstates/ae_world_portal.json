@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "axis=z": {
+      "model": "alchemical_excellence:block/ae_world_portal_ew"
+    },
+    "axis=x": {
+      "model": "alchemical_excellence:block/ae_world_portal_ns"
+    }
+  }
+}

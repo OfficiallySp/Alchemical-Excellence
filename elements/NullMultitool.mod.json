@@ -1,0 +1,29 @@
+{
+  "_fv": 18,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "nullmultitool",
+    "customModelName": "Normal",
+    "name": "Null Multitool",
+    "specialInfo": [
+      "The embodiment of nothingness"
+    ],
+    "creativeTab": {
+      "value": "CUSTOM:AEMod"
+    },
+    "toolType": "MultiTool",
+    "harvestLevel": 128000,
+    "efficiency": 127999.99,
+    "attackSpeed": 0.0,
+    "enchantability": 128000,
+    "damageVsEntity": 0.0,
+    "usageCount": 0,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [],
+    "immuneToFire": true,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false
+  }
+}

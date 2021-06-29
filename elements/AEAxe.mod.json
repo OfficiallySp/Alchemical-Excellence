@@ -1,0 +1,27 @@
+{
+  "_fv": 18,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "ae_axe",
+    "customModelName": "Normal",
+    "name": "AE Axe",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:AEMod"
+    },
+    "toolType": "Axe",
+    "harvestLevel": 5,
+    "efficiency": 20.0,
+    "attackSpeed": 0.5,
+    "enchantability": 25,
+    "damageVsEntity": 4.0,
+    "usageCount": 2048,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [],
+    "immuneToFire": true,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false
+  }
+}

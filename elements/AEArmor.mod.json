@@ -1,0 +1,74 @@
+{
+  "_fv": 18,
+  "_type": "armor",
+  "definition": {
+    "enableHelmet": true,
+    "textureHelmet": "ae_head",
+    "enableBody": true,
+    "textureBody": "ae_body",
+    "enableLeggings": true,
+    "textureLeggings": "ae_leggings",
+    "enableBoots": true,
+    "textureBoots": "ae_boots",
+    "onHelmetTick": {
+      "name": "AEArmorHelmetTickEvent"
+    },
+    "onBodyTick": {
+      "name": "AEArmorBodyTickEvent"
+    },
+    "onLeggingsTick": {
+      "name": "AEArmorLeggingsTickEvent"
+    },
+    "onBootsTick": {
+      "name": "AEArmorBootsTickEvent"
+    },
+    "creativeTab": {
+      "value": "CUSTOM:AEMod"
+    },
+    "armorTextureFile": "ae",
+    "helmetName": "AE Helmet",
+    "bodyName": "AE Chestplate",
+    "leggingsName": "AE Leggings",
+    "bootsName": "AE Boots",
+    "helmetSpecialInfo": [
+      "Grants Eternal Water Breathing When Worn"
+    ],
+    "bodySpecialInfo": [
+      "Grants Better Saturation When Worn"
+    ],
+    "leggingsSpecialInfo": [
+      "Grants Enhanced Jumping When Worn"
+    ],
+    "bootsSpecialInfo": [
+      "Grants Slow Falling When Worn"
+    ],
+    "helmetModelName": "Default",
+    "helmetModelPart": "Helmet",
+    "helmetModelTexture": "From armor",
+    "bodyModelName": "Default",
+    "bodyModelPart": "Body",
+    "armsModelPartL": "Arms L",
+    "armsModelPartR": "Arms R",
+    "bodyModelTexture": "From armor",
+    "leggingsModelName": "Default",
+    "leggingsModelPartL": "Leggings L",
+    "leggingsModelPartR": "Leggings R",
+    "leggingsModelTexture": "From armor",
+    "bootsModelName": "Default",
+    "bootsModelPartL": "Boots L",
+    "bootsModelPartR": "Boots R",
+    "bootsModelTexture": "From armor",
+    "maxDamage": 40,
+    "damageValueHelmet": 5,
+    "damageValueBody": 10,
+    "damageValueLeggings": 7,
+    "damageValueBoots": 5,
+    "enchantability": 25,
+    "toughness": 3.5,
+    "knockbackResistance": 0.30000000000000004,
+    "equipSound": {
+      "value": ""
+    },
+    "repairItems": []
+  }
+}

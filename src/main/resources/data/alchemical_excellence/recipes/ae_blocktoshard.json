@@ -1,0 +1,13 @@
+{
+  "group": "alchemical_excellence",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "alchemical_excellence:ae_block"
+    }
+  ],
+  "result": {
+    "item": "alchemical_excellence:ae_shard",
+    "count": 10
+  }
+}

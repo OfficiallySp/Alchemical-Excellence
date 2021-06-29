@@ -1,0 +1,11 @@
+{
+  "_fv": 18,
+  "_type": "tab",
+  "definition": {
+    "name": "AE",
+    "icon": {
+      "value": "Blocks.PORTAL"
+    },
+    "showSearch": false
+  }
+}

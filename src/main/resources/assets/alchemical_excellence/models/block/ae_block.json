@@ -1,0 +1,7 @@
+{
+  "parent": "block/leaves",
+  "textures": {
+    "all": "alchemical_excellence:blocks/aeblock",
+    "particle": "alchemical_excellence:blocks/aeblock"
+  }
+}

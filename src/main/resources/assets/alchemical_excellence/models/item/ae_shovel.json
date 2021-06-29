@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "alchemical_excellence:items/ae_shovel"
+  }
+}

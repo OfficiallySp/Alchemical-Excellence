@@ -1,0 +1,8 @@
+{
+  "parent": "block/inner_stairs",
+  "textures": {
+    "bottom": "alchemical_excellence:blocks/pearlstone",
+    "top": "alchemical_excellence:blocks/pearlstone",
+    "side": "alchemical_excellence:blocks/pearlstone"
+  }
+}

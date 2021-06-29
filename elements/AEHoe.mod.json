@@ -1,0 +1,33 @@
+{
+  "_fv": 18,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "ae_hoe",
+    "customModelName": "Normal",
+    "name": "AE Hoe",
+    "specialInfo": [
+      "Gives a small chance to activate Grim Harvest",
+      "Generates Bonemeal when activated"
+    ],
+    "creativeTab": {
+      "value": "CUSTOM:AEMod"
+    },
+    "toolType": "Hoe",
+    "harvestLevel": 5,
+    "efficiency": 20.0,
+    "attackSpeed": 0.5,
+    "enchantability": 14,
+    "damageVsEntity": 4.0,
+    "usageCount": 2048,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [],
+    "immuneToFire": true,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "onRightClickedOnBlock": {
+      "name": "AEHoeEntitySwingsItem"
+    }
+  }
+}

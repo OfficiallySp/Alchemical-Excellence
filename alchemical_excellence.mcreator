@@ -1,10 +1,748 @@
 {
   "id_map": {},
-  "mod_elements": [],
+  "mod_elements": [
+    {
+      "name": "AEMod",
+      "type": "tab",
+      "sortid": 29,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ae_modtab"
+    },
+    {
+      "name": "AEFragment",
+      "type": "item",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ae_fragment"
+    },
+    {
+      "name": "AEShard",
+      "type": "item",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ae_shard"
+    },
+    {
+      "name": "AEOre",
+      "type": "block",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ae_ore"
+    },
+    {
+      "name": "AEBinder",
+      "type": "block",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ae_binder"
+    },
+    {
+      "name": "AEInfuser",
+      "type": "block",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ae_infuser"
+    },
+    {
+      "name": "AEChest",
+      "type": "block",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ae_chest"
+    },
+    {
+      "name": "AEBlock",
+      "type": "block",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ae_block"
+    },
+    {
+      "name": "BinderGUI",
+      "type": "gui",
+      "sortid": 30,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "binder_gui"
+    },
+    {
+      "name": "AEBinderUpdateTick",
+      "type": "procedure",
+      "sortid": 31,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ae_binder_bind",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "InfuserGUI",
+      "type": "gui",
+      "sortid": 32,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "infuser_gui"
+    },
+    {
+      "name": "AEInfuserInfuse",
+      "type": "procedure",
+      "sortid": 33,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ae_infuser_infuse",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ChestGUI",
+      "type": "gui",
+      "sortid": 34,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "chest_gui"
+    },
+    {
+      "name": "AEPaxel",
+      "type": "tool",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ae_paxel"
+    },
+    {
+      "name": "NullMultitool",
+      "type": "tool",
+      "sortid": 28,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "null_multitool"
+    },
+    {
+      "name": "MysticalStone",
+      "type": "item",
+      "sortid": 10,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "mystical_stone"
+    },
+    {
+      "name": "ChargedMysticalStone",
+      "type": "item",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "charged_mystical_stone"
+    },
+    {
+      "name": "AEPickaxe",
+      "type": "tool",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ae_pickaxe"
+    },
+    {
+      "name": "AEAxe",
+      "type": "tool",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ae_axe"
+    },
+    {
+      "name": "AESword",
+      "type": "tool",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ae_sword"
+    },
+    {
+      "name": "AEShovel",
+      "type": "tool",
+      "sortid": 16,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ae_shovel"
+    },
+    {
+      "name": "AEHoe",
+      "type": "tool",
+      "sortid": 17,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ae_hoe"
+    },
+    {
+      "name": "AESwordLivingEntityIsHitWithTool",
+      "type": "procedure",
+      "sortid": 35,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ae_sword_ability",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AEPickaxeBlockDestroyedWithTool",
+      "type": "procedure",
+      "sortid": 36,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ae_pickaxe_ability",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AEHoeEntitySwingsItem",
+      "type": "procedure",
+      "sortid": 37,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ae_hoe_ability",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AEShovelBlockDestroyedWithTool",
+      "type": "procedure",
+      "sortid": 38,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ae_shovel_ability",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AEArmor",
+      "type": "armor",
+      "sortid": 18,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ae_armor",
+      "metadata": {
+        "eh": true,
+        "el": true,
+        "eb": true,
+        "ec": true
+      }
+    },
+    {
+      "name": "AEArmorHelmetTickEvent",
+      "type": "procedure",
+      "sortid": 39,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ae_armor_helmet_tick_event",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AEArmorBootsTickEvent",
+      "type": "procedure",
+      "sortid": 40,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ae_armor_boots_tick_event",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AEArmorLeggingsTickEvent",
+      "type": "procedure",
+      "sortid": 41,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ae_armor_leggings_tick_event",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AEArmorBodyTickEvent",
+      "type": "procedure",
+      "sortid": 42,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ae_armor_body_tick_event",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AEBlocktoshard",
+      "type": "recipe",
+      "sortid": 43,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ae_blocktoshard"
+    },
+    {
+      "name": "AEFlower",
+      "type": "plant",
+      "sortid": 19,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ae_flower"
+    },
+    {
+      "name": "AEPearlsand",
+      "type": "block",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ae_pearlsand"
+    },
+    {
+      "name": "AEPearlstone",
+      "type": "block",
+      "sortid": 23,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ae_pearlstone"
+    },
+    {
+      "name": "AEPearlGrass",
+      "type": "block",
+      "sortid": 20,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ae_pearlgrass"
+    },
+    {
+      "name": "AEPearldirt",
+      "type": "block",
+      "sortid": 21,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ae_pearldirt"
+    },
+    {
+      "name": "DirtBlocks",
+      "type": "tag",
+      "sortid": 44,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dirt_blocks"
+    },
+    {
+      "name": "LogBlocks",
+      "type": "tag",
+      "sortid": 45,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "log_blocks"
+    },
+    {
+      "name": "AEBiome",
+      "type": "biome",
+      "sortid": 46,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ae_biome"
+    },
+    {
+      "name": "AEWorld",
+      "type": "dimension",
+      "sortid": 27,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ae_world",
+      "metadata": {
+        "ep": true
+      }
+    },
+    {
+      "name": "AEPearlstoneWall",
+      "type": "block",
+      "sortid": 24,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ae_pearlstone_wall"
+    },
+    {
+      "name": "AEPearlstoneSlab",
+      "type": "block",
+      "sortid": 25,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ae_pearlstone_slab"
+    },
+    {
+      "name": "AEPearlstoneStairs",
+      "type": "block",
+      "sortid": 26,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ae_pearlstone_stairs"
+    },
+    {
+      "name": "AECoal",
+      "type": "item",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ae_coal"
+    },
+    {
+      "name": "AEFuel",
+      "type": "fuel",
+      "sortid": 47,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ae_fuel"
+    },
+    {
+      "name": "AECoalEX",
+      "type": "item",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ae_coal_ex"
+    },
+    {
+      "name": "AEFuelEX",
+      "type": "fuel",
+      "sortid": 48,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ae_fuel_ex"
+    }
+  ],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
-    "en_us": {}
+    "en_us": {
+      "block.alchex.ae_ore": "Alchemical Fragment Ore",
+      "block.alch_ex.ae_pearldirt": "AE Pearldirt",
+      "item.ae.ae_armor_helmet": "AE Helmet",
+      "block.alch_ex.ae_block": "Alchemical Block",
+      "item.ae.ae_axe": "AE Axe",
+      "item.alch_ex.ae_shard": "Alchemical Shard",
+      "item.alchemical_excellence.ae_hoe": "AE Hoe",
+      "item.alchex.ae_axe": "AE Axe",
+      "item.alchex.mystical_stone": "Mystical Stone",
+      "item.alch_ex.ae_armor_leggings": "AE Leggings",
+      "block.alchex.ae_pearlstone_wall": "AE Pearlstone",
+      "item.alchex.ae_fragment": "Alchemical Fragment",
+      "item.alch_ex.ae_armor_boots": "AE Boots",
+      "block.alchex.ae_pearlsand": "AE Pearlsand",
+      "item.alchemical_excellence.ae_shard": "Alchemical Shard",
+      "block.ae.ae_pearlstone_slab": "AE Pearlstone",
+      "item.ae.ae_paxel": "AE Paxel",
+      "item.ae.ae_shard": "Alchemical Shard",
+      "block.alchemical_excellence.ae_ore": "Alchemical Fragment Ore",
+      "item.alchex.ae_paxel": "AE Paxel",
+      "item.alch_ex.ae_paxel": "AE Paxel",
+      "item.alch_ex.ae_hoe": "AE Hoe",
+      "block.alch_ex.ae_pearlstone_wall": "AE Pearlstone",
+      "item.alchex.charged_mystical_stone": "Mystical Stone",
+      "item.alchex.null_multitool": "Null Multitool",
+      "block.alch_ex.ae_ore": "Alchemical Fragment Ore",
+      "block.ae.ae_chest": "Alchemical Chest",
+      "block.alchemical_excellence.ae_pearlsand": "Pearlsand",
+      "item.ae.ae_armor_boots": "AE Boots",
+      "item.alchemical_excellence.ae_armor_boots": "AE Boots",
+      "block.alchex.ae_infuser": "Infuser",
+      "block.alch_ex.ae_pearlsand": "AE Pearlsand",
+      "item.alchemical_excellence.ae_sword": "AE Sword",
+      "block.alchemical_excellence.ae_pearldirt": "Pearldirt",
+      "item.alch_ex.ae_fragment": "Alchemical Fragment",
+      "block.alchemical_excellence.ae_chest": "Alchemical Chest",
+      "item.alch_ex.ae_pickaxe": "AE Pickaxe",
+      "block.alch_ex.ae_flower": "Chromaweed",
+      "item.alchex.ae_armor_boots": "AE Boots",
+      "item.alchemical_excellence.ae_armor_helmet": "AE Helmet",
+      "item.alchemical_excellence.ae_paxel": "AE Paxel",
+      "item.alchemical_excellence.ae_axe": "AE Axe",
+      "block.alchemical_excellence.ae_pearlstone_stairs": "Pearlstone Stairs",
+      "item.ae.ae_sword": "AE Sword",
+      "block.ae.ae_pearldirt": "AE Pearldirt",
+      "block.alchemical_excellence.ae_pearlstone_slab": "Pearlstone Slab",
+      "item.alch_ex.ae_armor_chestplate": "AE Chestplate",
+      "block.alchex.ae_pearlstone": "AE Pearlstone",
+      "block.alchex.ae_chest": "Alchemical Chest",
+      "item.alchemical_excellence.ae_armor_chestplate": "AE Chestplate",
+      "block.alch_ex.ae_pearlgrass": "AE Pearl Grass",
+      "biome.alchemical_excellence.ae_biome": "AE Biome",
+      "block.alchex.ae_flower": "Chromaweed",
+      "block.ae.ae_ore": "Alchemical Fragment Ore",
+      "item.alchex.ae_shovel": "AE Shovel",
+      "block.alchex.ae_pearlstone_stairs": "AE Pearlstone",
+      "item.alch_ex.ae_armor_helmet": "AE Helmet",
+      "item.alchex.ae_armor_helmet": "AE Helmet",
+      "item.ae.ae_armor_chestplate": "AE Chestplate",
+      "biome.alch_ex.ae_biome": "AE Biome",
+      "item.alch_ex.ae_axe": "AE Axe",
+      "block.alch_ex.ae_pearlstone_stairs": "AE Pearlstone",
+      "item.alchex.ae_hoe": "AE Hoe",
+      "block.alchex.ae_pearlstone_slab": "AE Pearlstone",
+      "block.alch_ex.ae_binder": "Binder",
+      "item.alchemical_excellence.ae_pickaxe": "AE Pickaxe",
+      "block.ae.ae_pearlstone_stairs": "AE Pearlstone",
+      "item.alch_ex.null_multitool": "Null Multitool",
+      "item.alchemical_excellence.ae_fragment": "Alchemical Fragment",
+      "block.ae.ae_pearlstone_wall": "AE Pearlstone",
+      "item.alch_ex.ae_shovel": "AE Shovel",
+      "item.ae.ae_world": "AE World Portal Igniter",
+      "item.alch_ex.mystical_stone": "Mystical Stone",
+      "block.alchemical_excellence.ae_binder": "Binder",
+      "block.ae.ae_pearlsand": "AE Pearlsand",
+      "block.ae.ae_pearlgrass": "AE Pearl Grass",
+      "block.ae.ae_binder": "Binder",
+      "item.ae.null_multitool": "Null Multitool",
+      "item.ae.charged_mystical_stone": "Mystical Stone",
+      "block.alchemical_excellence.ae_pearlgrass": "Pearlgrass",
+      "block.alch_ex.ae_pearlstone_slab": "AE Pearlstone",
+      "item.alchemical_excellence.charged_mystical_stone": "Mystical Stone",
+      "item.ae.ae_shovel": "AE Shovel",
+      "block.alchemical_excellence.ae_pearlstone": "Pearlstone",
+      "item.ae.ae_fragment": "Alchemical Fragment",
+      "item.alchex.ae_sword": "AE Sword",
+      "item.alchemical_excellence.null_multitool": "Null Multitool",
+      "block.ae.ae_block": "Alchemical Block",
+      "block.alchex.ae_pearlgrass": "AE Pearl Grass",
+      "item.ae.mystical_stone": "Mystical Stone",
+      "item.alchex.ae_armor_chestplate": "AE Chestplate",
+      "block.ae.ae_flower": "Chromaweed",
+      "item.alchemical_excellence.mystical_stone": "Mystical Stone",
+      "block.ae.ae_pearlstone": "AE Pearlstone",
+      "item.alchemical_excellence.ae_armor_leggings": "AE Leggings",
+      "block.alch_ex.ae_chest": "Alchemical Chest",
+      "item.alchex.ae_armor_leggings": "AE Leggings",
+      "item.alch_ex.ae_world": "AE World Portal Igniter",
+      "block.alchex.ae_binder": "Binder",
+      "item.ae.ae_armor_leggings": "AE Leggings",
+      "item.ae.ae_pickaxe": "AE Pickaxe",
+      "item.alchex.ae_shard": "Alchemical Shard",
+      "block.alchemical_excellence.ae_flower": "Chromaweed",
+      "block.alchemical_excellence.ae_block": "Alchemical Block",
+      "biome.ae.ae_biome": "AE Biome",
+      "block.alch_ex.ae_pearlstone": "AE Pearlstone",
+      "block.alchemical_excellence.ae_infuser": "Infuser",
+      "item.alchex.ae_world": "AE World Portal Igniter",
+      "itemGroup.tabae_modtab": "AE",
+      "block.alch_ex.ae_infuser": "Infuser",
+      "item.alch_ex.charged_mystical_stone": "Mystical Stone",
+      "item.alchemical_excellence.ae_coal_ex": "Alchemical Coal",
+      "block.alchex.ae_pearldirt": "AE Pearldirt",
+      "block.ae.ae_infuser": "Infuser",
+      "item.alchemical_excellence.ae_coal": "Alchemical Coal",
+      "item.alchemical_excellence.ae_shovel": "AE Shovel",
+      "item.alchemical_excellence.ae_world": "AE World Portal Igniter",
+      "block.alchex.ae_block": "Alchemical Block",
+      "item.ae.ae_hoe": "AE Hoe",
+      "block.alchemical_excellence.ae_pearlstone_wall": "Pearlstone Wall",
+      "item.alch_ex.ae_sword": "AE Sword",
+      "biome.alchex.ae_biome": "AE Biome",
+      "item.alchex.ae_pickaxe": "AE Pickaxe"
+    }
   },
   "foldersRoot": {
     "name": "~",
@@ -14,18 +752,18 @@
     "modid": "alchemical_excellence",
     "modName": "Alchemical Excellence",
     "version": "1.0.0",
-    "author": "OfficiallySp777",
-    "websiteURL": "https://mcreator.net",
-    "license": "Not specified",
+    "description": "description goes here whenever i can be bothered or not forget",
+    "author": "OfficiallySp",
+    "websiteURL": "https://officiallysp.sytes.net",
+    "license": "All Rights Reserved",
     "disableForgeVersionCheck": true,
     "serverSideOnly": false,
-    "modPicture": "binder_gui",
     "requiredMods": [],
     "dependencies": [],
     "dependants": [],
     "mcreatorDependencies": [],
     "currentGenerator": "forge-1.16.5",
-    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
+    "credits": "Created by Shane Pepperell (Sp777/OfficiallySp)",
     "modElementsPackage": "com.officiallysp.alchemicalexcellence",
     "lockBaseModFiles": false
   },
