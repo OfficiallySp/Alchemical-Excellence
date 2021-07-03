@@ -4,7 +4,7 @@
   "definition": {
     "name": "AE",
     "icon": {
-      "value": "Blocks.PORTAL"
+      "value": "CUSTOM:MysticalStone"
     },
     "showSearch": false
   }

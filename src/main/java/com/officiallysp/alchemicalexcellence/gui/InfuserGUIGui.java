@@ -41,7 +41,7 @@ public class InfuserGUIGui extends AlchemicalExcellenceModElements.ModElement {
 	public static HashMap guistate = new HashMap();
 	private static ContainerType<GuiContainerMod> containerType = null;
 	public InfuserGUIGui(AlchemicalExcellenceModElements instance) {
-		super(instance, 32);
+		super(instance, 42);
 		elements.addNetworkMessage(ButtonPressedMessage.class, ButtonPressedMessage::buffer, ButtonPressedMessage::new,
 				ButtonPressedMessage::handler);
 		elements.addNetworkMessage(GUISlotChangedMessage.class, GUISlotChangedMessage::buffer, GUISlotChangedMessage::new,

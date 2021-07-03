@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "alchemical_excellence:block/ae_pearlwoodslab"
+    },
+    "type=top": {
+      "model": "alchemical_excellence:block/ae_pearlwoodslab_top"
+    },
+    "type=double": {
+      "model": "alchemical_excellence:block/ae_pearlwoodslab_full"
+    }
+  }
+}

@@ -23,7 +23,7 @@ public class AEPearlstoneBlock extends AlchemicalExcellenceModElements.ModElemen
 	@ObjectHolder("alchemical_excellence:ae_pearlstone")
 	public static final Block block = null;
 	public AEPearlstoneBlock(AlchemicalExcellenceModElements instance) {
-		super(instance, 23);
+		super(instance, 30);
 	}
 
 	@Override

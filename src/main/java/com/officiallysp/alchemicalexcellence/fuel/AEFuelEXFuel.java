@@ -13,7 +13,7 @@ import com.officiallysp.alchemicalexcellence.AlchemicalExcellenceModElements;
 @AlchemicalExcellenceModElements.ModElement.Tag
 public class AEFuelEXFuel extends AlchemicalExcellenceModElements.ModElement {
 	public AEFuelEXFuel(AlchemicalExcellenceModElements instance) {
-		super(instance, 48);
+		super(instance, 55);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 

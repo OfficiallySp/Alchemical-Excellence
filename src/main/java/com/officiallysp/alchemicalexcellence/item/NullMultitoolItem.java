@@ -30,7 +30,7 @@ public class NullMultitoolItem extends AlchemicalExcellenceModElements.ModElemen
 	@ObjectHolder("alchemical_excellence:null_multitool")
 	public static final Item block = null;
 	public NullMultitoolItem(AlchemicalExcellenceModElements instance) {
-		super(instance, 28);
+		super(instance, 38);
 	}
 
 	@Override

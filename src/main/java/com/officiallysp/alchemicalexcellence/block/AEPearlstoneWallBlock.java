@@ -35,10 +35,10 @@ import com.officiallysp.alchemicalexcellence.AlchemicalExcellenceModElements;
 
 @AlchemicalExcellenceModElements.ModElement.Tag
 public class AEPearlstoneWallBlock extends AlchemicalExcellenceModElements.ModElement {
-	@ObjectHolder("alchemical_excellence:ae_pearlstone_wall")
+	@ObjectHolder("alchemical_excellence:ae_pearlstonewall")
 	public static final Block block = null;
 	public AEPearlstoneWallBlock(AlchemicalExcellenceModElements instance) {
-		super(instance, 24);
+		super(instance, 31);
 	}
 
 	@Override
@@ -49,7 +49,7 @@ public class AEPearlstoneWallBlock extends AlchemicalExcellenceModElements.ModEl
 	public static class CustomBlock extends WallBlock {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(1f, 10f).setLightLevel(s -> 0));
-			setRegistryName("ae_pearlstone_wall");
+			setRegistryName("ae_pearlstonewall");
 		}
 		private static final VoxelShape CENTER_POLE_SHAPE = Block.makeCuboidShape(7.0D, 0.0D, 7.0D, 9.0D, 16.0D, 9.0D);
 		private static final VoxelShape WALL_CONNECTION_NORTH_SIDE_SHAPE = Block.makeCuboidShape(7.0D, 0.0D, 0.0D, 9.0D, 16.0D, 9.0D);

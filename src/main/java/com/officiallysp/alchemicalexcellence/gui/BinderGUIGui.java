@@ -40,7 +40,7 @@ public class BinderGUIGui extends AlchemicalExcellenceModElements.ModElement {
 	public static HashMap guistate = new HashMap();
 	private static ContainerType<GuiContainerMod> containerType = null;
 	public BinderGUIGui(AlchemicalExcellenceModElements instance) {
-		super(instance, 30);
+		super(instance, 40);
 		elements.addNetworkMessage(ButtonPressedMessage.class, ButtonPressedMessage::buffer, ButtonPressedMessage::new,
 				ButtonPressedMessage::handler);
 		elements.addNetworkMessage(GUISlotChangedMessage.class, GUISlotChangedMessage::buffer, GUISlotChangedMessage::new,

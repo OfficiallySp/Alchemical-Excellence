@@ -108,7 +108,7 @@ public class AEOreBlock extends AlchemicalExcellenceModElements.ModElement {
 				}
 			};
 			configuredFeature = feature.withConfiguration(new OreFeatureConfig(CustomRuleTest.INSTANCE, block.getDefaultState(), 8)).range(256)
-					.square().func_242731_b(5);
+					.square().func_242731_b(4);
 			event.getRegistry().register(feature.setRegistryName("ae_ore"));
 			Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation("alchemical_excellence:ae_ore"), configuredFeature);
 		}

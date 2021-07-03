@@ -24,7 +24,7 @@ import com.officiallysp.alchemicalexcellence.AlchemicalExcellenceMod;
 @AlchemicalExcellenceModElements.ModElement.Tag
 public class AESwordLivingEntityIsHitWithToolProcedure extends AlchemicalExcellenceModElements.ModElement {
 	public AESwordLivingEntityIsHitWithToolProcedure(AlchemicalExcellenceModElements instance) {
-		super(instance, 35);
+		super(instance, 45);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

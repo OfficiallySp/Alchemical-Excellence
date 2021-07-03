@@ -1,0 +1,7 @@
+{
+  "parent": "block/fence_post",
+  "textures": {
+    "texture": "alchemical_excellence:blocks/pearlwoodplank",
+    "particle": "alchemical_excellence:blocks/pearlwoodplank"
+  }
+}

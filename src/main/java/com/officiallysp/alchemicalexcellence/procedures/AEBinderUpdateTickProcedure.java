@@ -21,7 +21,7 @@ import com.officiallysp.alchemicalexcellence.AlchemicalExcellenceMod;
 @AlchemicalExcellenceModElements.ModElement.Tag
 public class AEBinderUpdateTickProcedure extends AlchemicalExcellenceModElements.ModElement {
 	public AEBinderUpdateTickProcedure(AlchemicalExcellenceModElements instance) {
-		super(instance, 31);
+		super(instance, 41);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

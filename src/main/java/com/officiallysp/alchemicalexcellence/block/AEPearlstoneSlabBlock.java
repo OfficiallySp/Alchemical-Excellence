@@ -22,10 +22,10 @@ import com.officiallysp.alchemicalexcellence.AlchemicalExcellenceModElements;
 
 @AlchemicalExcellenceModElements.ModElement.Tag
 public class AEPearlstoneSlabBlock extends AlchemicalExcellenceModElements.ModElement {
-	@ObjectHolder("alchemical_excellence:ae_pearlstone_slab")
+	@ObjectHolder("alchemical_excellence:ae_pearlstoneslab")
 	public static final Block block = null;
 	public AEPearlstoneSlabBlock(AlchemicalExcellenceModElements instance) {
-		super(instance, 25);
+		super(instance, 32);
 	}
 
 	@Override
@@ -36,7 +36,7 @@ public class AEPearlstoneSlabBlock extends AlchemicalExcellenceModElements.ModEl
 	public static class CustomBlock extends SlabBlock {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(1f, 10f).setLightLevel(s -> 0));
-			setRegistryName("ae_pearlstone_slab");
+			setRegistryName("ae_pearlstoneslab");
 		}
 
 		@Override

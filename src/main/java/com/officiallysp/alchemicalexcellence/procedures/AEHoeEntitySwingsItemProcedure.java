@@ -22,7 +22,7 @@ import com.officiallysp.alchemicalexcellence.AlchemicalExcellenceMod;
 @AlchemicalExcellenceModElements.ModElement.Tag
 public class AEHoeEntitySwingsItemProcedure extends AlchemicalExcellenceModElements.ModElement {
 	public AEHoeEntitySwingsItemProcedure(AlchemicalExcellenceModElements instance) {
-		super(instance, 37);
+		super(instance, 47);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

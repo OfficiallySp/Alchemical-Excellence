@@ -15,7 +15,7 @@ import com.officiallysp.alchemicalexcellence.AlchemicalExcellenceModElements;
 
 @AlchemicalExcellenceModElements.ModElement.Tag
 public class AECoalEXItem extends AlchemicalExcellenceModElements.ModElement {
-	@ObjectHolder("alchemical_excellence:ae_coal_ex")
+	@ObjectHolder("alchemical_excellence:ae_coalex")
 	public static final Item block = null;
 	public AECoalEXItem(AlchemicalExcellenceModElements instance) {
 		super(instance, 9);
@@ -28,7 +28,7 @@ public class AECoalEXItem extends AlchemicalExcellenceModElements.ModElement {
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
 			super(new Item.Properties().group(AEModItemGroup.tab).maxStackSize(64).rarity(Rarity.UNCOMMON));
-			setRegistryName("ae_coal_ex");
+			setRegistryName("ae_coalex");
 		}
 
 		@Override

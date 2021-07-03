@@ -21,10 +21,10 @@ import com.officiallysp.alchemicalexcellence.AlchemicalExcellenceModElements;
 
 @AlchemicalExcellenceModElements.ModElement.Tag
 public class AEPearlstoneStairsBlock extends AlchemicalExcellenceModElements.ModElement {
-	@ObjectHolder("alchemical_excellence:ae_pearlstone_stairs")
+	@ObjectHolder("alchemical_excellence:ae_pearlstonestairs")
 	public static final Block block = null;
 	public AEPearlstoneStairsBlock(AlchemicalExcellenceModElements instance) {
-		super(instance, 26);
+		super(instance, 33);
 	}
 
 	@Override
@@ -37,7 +37,7 @@ public class AEPearlstoneStairsBlock extends AlchemicalExcellenceModElements.Mod
 			super(() -> new Block(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(1f, 10f).setLightLevel(s -> 0))
 					.getDefaultState(),
 					Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(1f, 10f).setLightLevel(s -> 0));
-			setRegistryName("ae_pearlstone_stairs");
+			setRegistryName("ae_pearlstonestairs");
 		}
 
 		@Override

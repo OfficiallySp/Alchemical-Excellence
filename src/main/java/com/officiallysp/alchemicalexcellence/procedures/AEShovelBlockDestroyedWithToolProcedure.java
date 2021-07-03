@@ -20,7 +20,7 @@ import com.officiallysp.alchemicalexcellence.AlchemicalExcellenceMod;
 @AlchemicalExcellenceModElements.ModElement.Tag
 public class AEShovelBlockDestroyedWithToolProcedure extends AlchemicalExcellenceModElements.ModElement {
 	public AEShovelBlockDestroyedWithToolProcedure(AlchemicalExcellenceModElements instance) {
-		super(instance, 38);
+		super(instance, 48);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

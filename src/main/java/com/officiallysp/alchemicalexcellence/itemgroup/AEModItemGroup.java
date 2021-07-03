@@ -6,14 +6,14 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemGroup;
-import net.minecraft.block.Blocks;
 
+import com.officiallysp.alchemicalexcellence.item.MysticalStoneItem;
 import com.officiallysp.alchemicalexcellence.AlchemicalExcellenceModElements;
 
 @AlchemicalExcellenceModElements.ModElement.Tag
 public class AEModItemGroup extends AlchemicalExcellenceModElements.ModElement {
 	public AEModItemGroup(AlchemicalExcellenceModElements instance) {
-		super(instance, 29);
+		super(instance, 39);
 	}
 
 	@Override
@@ -22,7 +22,7 @@ public class AEModItemGroup extends AlchemicalExcellenceModElements.ModElement {
 			@OnlyIn(Dist.CLIENT)
 			@Override
 			public ItemStack createIcon() {
-				return new ItemStack(Blocks.NETHER_PORTAL, (int) (1));
+				return new ItemStack(MysticalStoneItem.block, (int) (1));
 			}
 
 			@OnlyIn(Dist.CLIENT)

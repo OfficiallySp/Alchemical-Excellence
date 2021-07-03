@@ -1,0 +1,7 @@
+{
+  "parent": "block/door_top_rh",
+  "textures": {
+    "bottom": "alchemical_excellence:blocks/pearlwoodplank",
+    "top": "alchemical_excellence:blocks/pearlwoodplank"
+  }
+}

@@ -20,7 +20,7 @@ import com.officiallysp.alchemicalexcellence.AlchemicalExcellenceMod;
 @AlchemicalExcellenceModElements.ModElement.Tag
 public class AEPickaxeBlockDestroyedWithToolProcedure extends AlchemicalExcellenceModElements.ModElement {
 	public AEPickaxeBlockDestroyedWithToolProcedure(AlchemicalExcellenceModElements instance) {
-		super(instance, 36);
+		super(instance, 46);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

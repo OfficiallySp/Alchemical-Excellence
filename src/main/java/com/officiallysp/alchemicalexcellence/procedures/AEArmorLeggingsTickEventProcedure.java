@@ -13,7 +13,7 @@ import com.officiallysp.alchemicalexcellence.AlchemicalExcellenceMod;
 @AlchemicalExcellenceModElements.ModElement.Tag
 public class AEArmorLeggingsTickEventProcedure extends AlchemicalExcellenceModElements.ModElement {
 	public AEArmorLeggingsTickEventProcedure(AlchemicalExcellenceModElements instance) {
-		super(instance, 41);
+		super(instance, 51);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

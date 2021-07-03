@@ -12,6 +12,7 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.Map;
 
+import com.officiallysp.alchemicalexcellence.item.MysticalStoneItem;
 import com.officiallysp.alchemicalexcellence.item.AEShardItem;
 import com.officiallysp.alchemicalexcellence.AlchemicalExcellenceModElements;
 import com.officiallysp.alchemicalexcellence.AlchemicalExcellenceMod;
@@ -19,7 +20,7 @@ import com.officiallysp.alchemicalexcellence.AlchemicalExcellenceMod;
 @AlchemicalExcellenceModElements.ModElement.Tag
 public class AEInfuserInfuseProcedure extends AlchemicalExcellenceModElements.ModElement {
 	public AEInfuserInfuseProcedure(AlchemicalExcellenceModElements instance) {
-		super(instance, 33);
+		super(instance, 43);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
@@ -69,7 +70,7 @@ public class AEInfuserInfuseProcedure extends AlchemicalExcellenceModElements.Mo
 				}
 				return _retval.get();
 			}
-		}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem() == new ItemStack(AEShardItem.block, (int) (1)).getItem())
+		}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem() == new ItemStack(MysticalStoneItem.block, (int) (1)).getItem())
 				&& ((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
@@ -116,6 +117,30 @@ public class AEInfuserInfuseProcedure extends AlchemicalExcellenceModElements.Mo
 				if (_ent != null) {
 					final int _sltid = (int) (2);
 					final ItemStack _setstack = new ItemStack(AEShardItem.block, (int) (1));
+					_setstack.setCount((int) ((new Object() {
+						public int getAmount(IWorld world, BlockPos pos, int sltid) {
+							AtomicInteger _retval = new AtomicInteger(0);
+							TileEntity _ent = world.getTileEntity(pos);
+							if (_ent != null) {
+								_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+									_retval.set(capability.getStackInSlot(sltid).getCount());
+								});
+							}
+							return _retval.get();
+						}
+					}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) + 1));
+					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+						if (capability instanceof IItemHandlerModifiable) {
+							((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
+						}
+					});
+				}
+			}
+			{
+				TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
+				if (_ent != null) {
+					final int _sltid = (int) (2);
+					final ItemStack _setstack = new ItemStack(MysticalStoneItem.block, (int) (1));
 					_setstack.setCount((int) ((new Object() {
 						public int getAmount(IWorld world, BlockPos pos, int sltid) {
 							AtomicInteger _retval = new AtomicInteger(0);

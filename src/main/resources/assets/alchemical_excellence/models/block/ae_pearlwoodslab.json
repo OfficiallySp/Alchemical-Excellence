@@ -1,0 +1,8 @@
+{
+  "parent": "block/slab",
+  "textures": {
+    "bottom": "alchemical_excellence:blocks/pearlwoodplank",
+    "top": "alchemical_excellence:blocks/pearlwoodplank",
+    "side": "alchemical_excellence:blocks/pearlwoodplank"
+  }
+}
