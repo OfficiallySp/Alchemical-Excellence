@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "alchemical_excellence:ae_pearlwood"
+    }
+  ],
+  "result": {
+    "item": "alchemical_excellence:ae_pearlwoodplank",
+    "count": 4
+  }
+}

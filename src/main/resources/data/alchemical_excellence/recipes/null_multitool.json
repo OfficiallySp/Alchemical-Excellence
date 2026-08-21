@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " A ",
+    "PNP",
+    " A "
+  ],
+  "key": {
+    "A": {
+      "item": "alchemical_excellence:nullitestoneamp"
+    },
+    "P": {
+      "item": "alchemical_excellence:ae_paxel"
+    },
+    "N": {
+      "item": "minecraft:nether_star"
+    }
+  },
+  "result": {
+    "item": "alchemical_excellence:null_multitool",
+    "count": 1
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "NCN",
+    "NAN",
+    "NNN"
+  ],
+  "key": {
+    "N": {
+      "item": "minecraft:nether_brick"
+    },
+    "C": {
+      "item": "minecraft:chest"
+    },
+    "A": {
+      "item": "alchemical_excellence:ae_block"
+    }
+  },
+  "result": {
+    "item": "alchemical_excellence:ae_chest",
+    "count": 1
+  }
+}

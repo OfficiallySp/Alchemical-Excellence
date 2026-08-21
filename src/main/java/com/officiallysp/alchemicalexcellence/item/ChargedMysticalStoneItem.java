@@ -72,6 +72,7 @@ public class ChargedMysticalStoneItem extends AlchemicalExcellenceModElements.Mo
 		public void addInformation(ItemStack itemstack, World world, List<ITextComponent> list, ITooltipFlag flag) {
 			super.addInformation(itemstack, world, list, flag);
 			list.add(new StringTextComponent("Charged"));
+			list.add(new StringTextComponent("Catalyst for alchemical crafting. Returned after use."));
 		}
 	}
 }

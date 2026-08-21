@@ -7,11 +7,18 @@ modId="alchemical_excellence"
 version="1.0.0"
 displayName="Alchemical Excellence"
 credits="Created by Shane Pepperell (Sp777/OfficiallySp)"
-displayURL="https://officiallysp.sytes.net"
+displayURL="https://officiallysp.net"
 authors="OfficiallySp"
 description='''
-description goes here whenever i can be bothered or not forget
+Endgame Nether alchemy. Mine Alchemical Fragment Ore, bind shards into blocks, infuse a Mystical Stone, and forge fireproof tools, armor, and the AE Paxel. Rare Nullite Ore yields the Nullite Amplifier and the Null Multitool.
 '''
+
+[[dependencies.alchemical_excellence]]
+    modId="forge"
+    mandatory=true
+    versionRange="[36,)"
+    ordering="NONE"
+    side="BOTH"
 
 [[dependencies.alchemical_excellence]]
     modId="minecraft"
@@ -19,7 +26,3 @@ description goes here whenever i can be bothered or not forget
     versionRange="[1.16.5]"
     ordering="NONE"
     side="BOTH"
-
-
-
-

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "NNN",
+    "NNN"
+  ],
+  "key": {
+    "N": {
+      "item": "alchemical_excellence:ae_pearlstone"
+    }
+  },
+  "result": {
+    "item": "alchemical_excellence:ae_pearlstonewall",
+    "count": 6
+  }
+}

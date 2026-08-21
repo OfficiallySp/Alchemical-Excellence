@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "NNN",
+    "NBN",
+    "NNN"
+  ],
+  "key": {
+    "N": {
+      "item": "alchemical_excellence:ae_nullitestone"
+    },
+    "B": {
+      "item": "minecraft:nether_bricks"
+    }
+  },
+  "result": {
+    "item": "alchemical_excellence:ae_nulliteamp",
+    "count": 1
+  }
+}

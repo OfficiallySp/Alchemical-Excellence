@@ -2,6 +2,7 @@
 package com.officiallysp.alchemicalexcellence.item;
 
 import net.minecraftforge.registries.ObjectHolder;
+import net.minecraftforge.common.ToolType;
 
 import net.minecraft.world.World;
 import net.minecraft.util.text.StringTextComponent;
@@ -45,7 +46,8 @@ public class NullMultitoolItem extends AlchemicalExcellenceModElements.ModElemen
 	}
 	private static class ItemToolCustom extends Item {
 		protected ItemToolCustom() {
-			super(new Item.Properties().group(AEModItemGroup.tab).maxDamage(0));
+			super(new Item.Properties().group(AEModItemGroup.tab).maxDamage(0)
+					.addToolType(ToolType.PICKAXE, 128000).addToolType(ToolType.AXE, 128000).addToolType(ToolType.SHOVEL, 128000));
 		}
 
 		@Override

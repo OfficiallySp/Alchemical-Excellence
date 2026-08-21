@@ -12,6 +12,7 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.Map;
 
+import com.officiallysp.alchemicalexcellence.item.NullitestoneampItem;
 import com.officiallysp.alchemicalexcellence.item.NulliteStoneItem;
 import com.officiallysp.alchemicalexcellence.AlchemicalExcellenceModElements;
 import com.officiallysp.alchemicalexcellence.AlchemicalExcellenceMod;
@@ -220,7 +221,7 @@ public class NulliteampcombineProcedure extends AlchemicalExcellenceModElements.
 				TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
 				if (_ent != null) {
 					final int _sltid = (int) (6);
-					final ItemStack _setstack = new ItemStack(NulliteStoneItem.block, (int) (1));
+					final ItemStack _setstack = new ItemStack(NullitestoneampItem.block, (int) (1));
 					_setstack.setCount((int) ((new Object() {
 						public int getAmount(IWorld world, BlockPos pos, int sltid) {
 							AtomicInteger _retval = new AtomicInteger(0);

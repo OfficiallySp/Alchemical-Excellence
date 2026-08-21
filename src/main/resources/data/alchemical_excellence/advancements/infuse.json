@@ -1,0 +1,30 @@
+{
+  "parent": "alchemical_excellence:shard",
+  "display": {
+    "icon": {
+      "item": "alchemical_excellence:charged_mystical_stone"
+    },
+    "title": {
+      "translate": "advancements.alchemical_excellence.infuse.title"
+    },
+    "description": {
+      "translate": "advancements.alchemical_excellence.infuse.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "charged": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "alchemical_excellence:charged_mystical_stone"
+          }
+        ]
+      }
+    }
+  }
+}

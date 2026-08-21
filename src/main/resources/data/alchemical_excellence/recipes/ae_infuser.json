@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SDS",
+    "NBN",
+    "SDS"
+  ],
+  "key": {
+    "S": {
+      "item": "alchemical_excellence:ae_shard"
+    },
+    "D": {
+      "item": "minecraft:diamond"
+    },
+    "N": {
+      "item": "minecraft:nether_brick"
+    },
+    "B": {
+      "item": "alchemical_excellence:ae_binder"
+    }
+  },
+  "result": {
+    "item": "alchemical_excellence:ae_infuser",
+    "count": 1
+  }
+}

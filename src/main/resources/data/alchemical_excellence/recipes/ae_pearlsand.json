@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:soul_sand"
+    },
+    {
+      "item": "alchemical_excellence:ae_flower"
+    },
+    {
+      "item": "alchemical_excellence:ae_flower"
+    }
+  ],
+  "result": {
+    "item": "alchemical_excellence:ae_pearlsand",
+    "count": 2
+  }
+}

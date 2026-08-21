@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "CCC",
+    "CSC",
+    "CCC"
+  ],
+  "key": {
+    "C": {
+      "item": "alchemical_excellence:ae_flower"
+    },
+    "S": {
+      "item": "minecraft:crimson_stem"
+    }
+  },
+  "result": {
+    "item": "alchemical_excellence:ae_pearlwood",
+    "count": 4
+  }
+}

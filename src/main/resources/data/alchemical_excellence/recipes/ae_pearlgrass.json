@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "alchemical_excellence:ae_pearldirt"
+    },
+    {
+      "item": "alchemical_excellence:ae_flower"
+    }
+  ],
+  "result": {
+    "item": "alchemical_excellence:ae_pearlgrass",
+    "count": 1
+  }
+}

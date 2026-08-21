@@ -9,6 +9,7 @@ import net.minecraft.item.IItemTier;
 import net.minecraft.item.AxeItem;
 
 import com.officiallysp.alchemicalexcellence.itemgroup.AEModItemGroup;
+import com.officiallysp.alchemicalexcellence.block.AEBlockBlock;
 import com.officiallysp.alchemicalexcellence.AlchemicalExcellenceModElements;
 
 @AlchemicalExcellenceModElements.ModElement.Tag
@@ -43,7 +44,7 @@ public class AEAxeItem extends AlchemicalExcellenceModElements.ModElement {
 			}
 
 			public Ingredient getRepairMaterial() {
-				return Ingredient.EMPTY;
+				return Ingredient.fromItems(AEBlockBlock.block);
 			}
 		}, 1, -3.5f, new Item.Properties().group(AEModItemGroup.tab).isImmuneToFire()) {
 		}.setRegistryName("ae_axe"));

@@ -1,0 +1,30 @@
+{
+  "parent": "alchemical_excellence:infuse",
+  "display": {
+    "icon": {
+      "item": "alchemical_excellence:ae_paxel"
+    },
+    "title": {
+      "translate": "advancements.alchemical_excellence.paxel.title"
+    },
+    "description": {
+      "translate": "advancements.alchemical_excellence.paxel.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "paxel": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "alchemical_excellence:ae_paxel"
+          }
+        ]
+      }
+    }
+  }
+}

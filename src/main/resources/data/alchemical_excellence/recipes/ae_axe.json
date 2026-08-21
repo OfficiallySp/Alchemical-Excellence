@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AA ",
+    "AS ",
+    " S "
+  ],
+  "key": {
+    "A": {
+      "item": "alchemical_excellence:ae_block"
+    },
+    "S": {
+      "item": "minecraft:blaze_rod"
+    }
+  },
+  "result": {
+    "item": "alchemical_excellence:ae_axe",
+    "count": 1
+  }
+}

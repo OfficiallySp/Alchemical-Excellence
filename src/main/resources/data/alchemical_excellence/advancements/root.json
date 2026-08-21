@@ -1,0 +1,30 @@
+{
+  "display": {
+    "icon": {
+      "item": "alchemical_excellence:ae_fragment"
+    },
+    "title": {
+      "translate": "advancements.alchemical_excellence.root.title"
+    },
+    "description": {
+      "translate": "advancements.alchemical_excellence.root.description"
+    },
+    "background": "minecraft:textures/gui/advancements/backgrounds/nether.png",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "fragment": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "alchemical_excellence:ae_fragment"
+          }
+        ]
+      }
+    }
+  }
+}

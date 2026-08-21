@@ -18,6 +18,7 @@ import java.util.HashMap;
 
 import com.officiallysp.alchemicalexcellence.procedures.AEShovelBlockDestroyedWithToolProcedure;
 import com.officiallysp.alchemicalexcellence.itemgroup.AEModItemGroup;
+import com.officiallysp.alchemicalexcellence.block.AEBlockBlock;
 import com.officiallysp.alchemicalexcellence.AlchemicalExcellenceModElements;
 
 @AlchemicalExcellenceModElements.ModElement.Tag
@@ -52,7 +53,7 @@ public class AEShovelItem extends AlchemicalExcellenceModElements.ModElement {
 			}
 
 			public Ingredient getRepairMaterial() {
-				return Ingredient.EMPTY;
+				return Ingredient.fromItems(AEBlockBlock.block);
 			}
 		}, 1, -3.5f, new Item.Properties().group(AEModItemGroup.tab).isImmuneToFire()) {
 			@Override

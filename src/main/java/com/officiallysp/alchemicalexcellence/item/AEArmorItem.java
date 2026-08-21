@@ -29,6 +29,7 @@ import com.officiallysp.alchemicalexcellence.procedures.AEArmorHelmetTickEventPr
 import com.officiallysp.alchemicalexcellence.procedures.AEArmorBootsTickEventProcedure;
 import com.officiallysp.alchemicalexcellence.procedures.AEArmorBodyTickEventProcedure;
 import com.officiallysp.alchemicalexcellence.itemgroup.AEModItemGroup;
+import com.officiallysp.alchemicalexcellence.block.AEBlockBlock;
 import com.officiallysp.alchemicalexcellence.AlchemicalExcellenceModElements;
 
 @AlchemicalExcellenceModElements.ModElement.Tag
@@ -65,12 +66,13 @@ public class AEArmorItem extends AlchemicalExcellenceModElements.ModElement {
 
 			@Override
 			public net.minecraft.util.SoundEvent getSoundEvent() {
-				return (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation(""));
+				return (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
+						.getValue(new ResourceLocation("item.armor.equip_netherite"));
 			}
 
 			@Override
 			public Ingredient getRepairMaterial() {
-				return Ingredient.EMPTY;
+				return Ingredient.fromItems(AEBlockBlock.block);
 			}
 
 			@OnlyIn(Dist.CLIENT)

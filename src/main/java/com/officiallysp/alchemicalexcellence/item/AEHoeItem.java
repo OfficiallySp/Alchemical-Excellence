@@ -24,6 +24,7 @@ import java.util.HashMap;
 
 import com.officiallysp.alchemicalexcellence.procedures.AEHoeEntitySwingsItemProcedure;
 import com.officiallysp.alchemicalexcellence.itemgroup.AEModItemGroup;
+import com.officiallysp.alchemicalexcellence.block.AEBlockBlock;
 import com.officiallysp.alchemicalexcellence.AlchemicalExcellenceModElements;
 
 @AlchemicalExcellenceModElements.ModElement.Tag
@@ -58,7 +59,7 @@ public class AEHoeItem extends AlchemicalExcellenceModElements.ModElement {
 			}
 
 			public Ingredient getRepairMaterial() {
-				return Ingredient.EMPTY;
+				return Ingredient.fromItems(AEBlockBlock.block);
 			}
 		}, 0, -3.5f, new Item.Properties().group(AEModItemGroup.tab).isImmuneToFire()) {
 			@Override

@@ -1,0 +1,30 @@
+{
+  "parent": "alchemical_excellence:root",
+  "display": {
+    "icon": {
+      "item": "alchemical_excellence:ae_shard"
+    },
+    "title": {
+      "translate": "advancements.alchemical_excellence.shard.title"
+    },
+    "description": {
+      "translate": "advancements.alchemical_excellence.shard.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "shard": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "alchemical_excellence:ae_shard"
+          }
+        ]
+      }
+    }
+  }
+}

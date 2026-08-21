@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "alchemical_excellence:ae_nulliteore"
+  },
+  "result": "alchemical_excellence:ae_nullitestone",
+  "experience": 1.0,
+  "cookingtime": 100
+}

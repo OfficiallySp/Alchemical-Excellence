@@ -1,0 +1,30 @@
+{
+  "parent": "alchemical_excellence:paxel",
+  "display": {
+    "icon": {
+      "item": "alchemical_excellence:null_multitool"
+    },
+    "title": {
+      "translate": "advancements.alchemical_excellence.nullite.title"
+    },
+    "description": {
+      "translate": "advancements.alchemical_excellence.nullite.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "amp": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "alchemical_excellence:nullitestoneamp"
+          }
+        ]
+      }
+    }
+  }
+}

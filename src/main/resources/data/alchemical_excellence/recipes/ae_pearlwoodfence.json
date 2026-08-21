@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "NSN",
+    "NSN"
+  ],
+  "key": {
+    "N": {
+      "item": "alchemical_excellence:ae_pearlwoodplank"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "alchemical_excellence:ae_pearlwoodfence",
+    "count": 3
+  }
+}

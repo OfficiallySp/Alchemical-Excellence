@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "A A",
+    "AAA",
+    "AAA"
+  ],
+  "key": {
+    "A": {
+      "item": "alchemical_excellence:ae_block"
+    }
+  },
+  "result": {
+    "item": "alchemical_excellence:ae_armor_chestplate",
+    "count": 1
+  }
+}

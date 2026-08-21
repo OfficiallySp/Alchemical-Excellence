@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PAS",
+    "HBW",
+    " T "
+  ],
+  "key": {
+    "P": {
+      "item": "alchemical_excellence:ae_pickaxe"
+    },
+    "A": {
+      "item": "alchemical_excellence:ae_axe"
+    },
+    "S": {
+      "item": "alchemical_excellence:ae_shovel"
+    },
+    "H": {
+      "item": "alchemical_excellence:ae_hoe"
+    },
+    "B": {
+      "item": "alchemical_excellence:ae_block"
+    },
+    "W": {
+      "item": "alchemical_excellence:ae_sword"
+    },
+    "T": {
+      "item": "minecraft:blaze_rod"
+    }
+  },
+  "result": {
+    "item": "alchemical_excellence:ae_paxel",
+    "count": 1
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "alchemical_excellence:ae_coal"
+    },
+    {
+      "item": "alchemical_excellence:ae_shard"
+    },
+    {
+      "item": "alchemical_excellence:charged_mystical_stone"
+    }
+  ],
+  "result": {
+    "item": "alchemical_excellence:ae_coalex",
+    "count": 1
+  }
+}

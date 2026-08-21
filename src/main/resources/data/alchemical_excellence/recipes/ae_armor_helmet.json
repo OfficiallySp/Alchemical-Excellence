@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AAA",
+    "A A"
+  ],
+  "key": {
+    "A": {
+      "item": "alchemical_excellence:ae_block"
+    }
+  },
+  "result": {
+    "item": "alchemical_excellence:ae_armor_helmet",
+    "count": 1
+  }
+}

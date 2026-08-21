@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "NNN"
+  ],
+  "key": {
+    "N": {
+      "item": "alchemical_excellence:ae_pearlwoodplank"
+    }
+  },
+  "result": {
+    "item": "alchemical_excellence:ae_pearlwoodslab",
+    "count": 6
+  }
+}
